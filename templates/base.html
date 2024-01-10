@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <title>Task Manager</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   {% block styles %}
@@ -19,33 +20,35 @@
 </head>
 
 <body>
-
+  <!-- Top Nav Bar-->
   <nav>
     <div class="nav-wrapper">
       <a href="{{ 'index' }}" class="brand-logo">Jot</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars icon"></i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="{{ 'index.html' }}">Home</a></li>
-        <li><a href="#">Log In</a></li>
-        <li><a href="#">Log Out</a></li>
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Entries</a></li>
-        <li><a href="#">Create Entry</a></li>
+        <li><a href="{{ 'index' }}">Home</a></li>
+        <li><a href="{{ 'register' }}">Register</a></li>
+        <li><a href="{{ 'login' }}">Log In</a></li>
+        <li><a href="{{ 'logout' }}">Log Out</a></li>
+        <li><a href="{{ 'profile' }}">Profile</a></li>
+        <li><a href="{{ 'entries' }}">Entries</a></li>
+        <li><a href="{{ 'create' }}">Create Entry</a></li>
       </ul>
     </div>
   </nav>
-
+<!-- Side Nav Bar -->
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="{{ 'index.html' }}">Home</a></li>
-    <li><a href="#">Log In</a></li>
-    <li><a href="#">Log Out</a></li>
-    <li><a href="#">Register</a></li>
-    <li><a href="#">Profile</a></li>
-    <li><a href="#">Entries</a></li>
-    <li><a href="#">Create Entry</a></li>
+    <li><a href="{{ 'index' }}">Home</a></li>
+    <li><a href="{{ 'register' }}">Register</a></li>
+    <li><a href="{{ 'login' }}">Log In</a></li>
+    <li><a href="{{ 'logout' }}">Log Out</a></li>
+    <li><a href="{{ 'profile' }}">Profile</a></li>
+    <li><a href="{{ 'entries' }}">Entries</a></li>
+    <li><a href="{{ 'create' }}">Create Entry</a></li>
   </ul>
 
+  {% block content %}
+  {% endblock %}
 
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"

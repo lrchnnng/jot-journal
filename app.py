@@ -11,10 +11,68 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
+
+mongo = PyMongo(app)
+
 
 @app.route("/")
-def get_tasks():
-    return render_template("base.html")
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        # put the new user into 'session' cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
+    
+    return render_template("register.html")
+
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+    
+
+@app.route("/logout")
+def logout():
+    return render_template("logout.html")
+
+
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+    
+
+@app.route("/entries")
+def entries():
+    return render_template("entries.html")
+
+    
+
+@app.route("/create")
+def create_entry():
+    return render_template("create.html")
 
 
 if __name__ == "__main__":
