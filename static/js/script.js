@@ -1,2 +1,3 @@
-import * as mdb from 'mdb-ui-kit'; // lib
-window.mdb = mdb;
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
