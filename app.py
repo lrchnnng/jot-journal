@@ -80,7 +80,10 @@ def login():
 
 @app.route("/logout")
 def logout():
-    return render_template("logout.html")
+    #remove user from session cookie
+    flash("You have been logged out")
+    session.clear()
+    return redirect(url_for("login"))
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
