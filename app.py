@@ -93,12 +93,12 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
-    
+        entries = mongo.db.entries.find()
+        return render_template("profile.html", username=username, entries=entries)
+
     return redirect(url_for("login"))
 
-    
-
+ 
 @app.route("/create")
 def create_entry():
     return render_template("create.html")
