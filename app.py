@@ -21,7 +21,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    entries = mongo.db.entries.find()
+    return render_template("index.html", entries=entries)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -93,8 +94,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        entries = mongo.db.entries.find()
-        return render_template("profile.html", username=username, entries=entries)
+        return render_template("profile.html", username=username, )
 
     return redirect(url_for("login"))
 

@@ -15,5 +15,27 @@
 </div>
 
 
+<ul class="collapsible">
+    {% for entry in entries %}
+    <li>
+        <div class="collapsible-header">
+            <i class="fas fa-caret-down"></i>
+            <h5>{{ entry.date }} {{entry.title}}</h5>
+        </div>
+        <div class="collapsible-body">
+            <p>{{ entry.main_entry }}</p>
+            <strong>Top 3 part of today:</strong>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_1a }}</p>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_1b }}</p>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_1c }}</p>
+            <p>{{ entry.main_entry }}</p>
+            <strong>Top 3 hopes for tomorrow:</strong>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_2a }}</p>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_2b }}</p>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_2c }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
