@@ -85,11 +85,11 @@ Automated tests are repeatable and reliable as there is limited risk for human e
 ### HTML <!-- omit in toc -->
 ![HTML Validation](link)
 - All of the HTML pages passed 
-![HTML Validation](assets/images/testing-img/html-error.png)
-- This error has appeared due to me leaving the img element source blank which is replaced within my quiz.js file. I fixed both of these issues by using a '#' as the source and creating a general, none specific alt text attribute (in this case it will always be a picture of a parrot). 
+![HTML Validation](link)
+- Explain any errors. 
 ### CSS <!-- omit in toc -->
-![CSS Validation](assets/images/testing-img/html-validation.png)
-- All pages passed the W3C CSS Validation.
+![CSS Validation](link)
+- All pages passed.
     
 ## JavaScript Testing <!-- omit in toc -->
 * I also ran both JS files through JSHint to make sure it was thoroughly tested.

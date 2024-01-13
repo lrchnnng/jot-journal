@@ -1,5 +1,4 @@
 # Build
-
 - Functionality
     - Profile page
     - Create entry page
@@ -17,8 +16,6 @@
     - footer
 
 # README
-
-
 - Scope
     - Features
         - Profile
