@@ -99,9 +99,9 @@ def profile(username):
     return redirect(url_for("login"))
 
  
-@app.route("/create")
+@app.route("/create_entry")
 def create_entry():
-    return render_template("create.html")
+    return render_template("create_entry.html")
 
 
 if __name__ == "__main__":

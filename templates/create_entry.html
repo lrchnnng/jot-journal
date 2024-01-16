@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3 class="center">Create Entry</h3>
+
+<div class="row">
+    <form class="col s8 offset-s2" method="POST" action="">
+        <!-- Date -->
+        <div class="row">
+            <input type="text" class="datepicker" id="date" name="date">
+        </div>
+
+        <!-- Entry Title-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix"></i>
+                <input placeholder="Create entry title" name="title" id="title" 
+                    type="text" class="validate" required>
+                <label for="title">Entry Title</label>
+            </div>
+        </div>
+
+        <!-- Main Entry -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix"></i>
+                <textarea id="main_entry" name="main_entry" minlength="5" maxlength="1000"
+                    class="materialize-textarea" required></textarea>
+                <label for="main_entry">Main entry</label>
+            </div>
+        </div>
+
+        <!-- Prompt 1 -->
+        <div class="row">
+            <h5 class="prompt center-align">Top 3 moments of today:</h3>
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-circle prefix"></i>
+                    <input id="answer_1a" name="answer_1a" type="text" class="validate" required>
+                    <label for="answer_1a">Answer</label>
+                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-circle prefix"></i>
+                <input id="answer_1b" name="answer_1b" type="text" class="validate" required>
+                <label for="answer_1b">Answer</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-circle prefix"></i>
+                <input id="answer_1c" name="answer_1c" type="text" class="validate" required>
+                <label for="answer_1c">Answer</label>
+            </div>
+        </div>
+        
+        <!-- Prompt 2 -->
+        <div class="row">
+            <h5 class="prompt center-align">Top 3 hopes for tomorrow:</h3>
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-circle prefix"></i>
+                    <input id="answer_2a" name="answer_2a" type="text" class="validate" required>
+                    <label for="answer_2a">Answer</label>
+                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-circle prefix"></i>
+                <input id="answer_2b" name="answer_2b" type="text" class="validate" required>
+                <label for="answer_2b">Answer</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-circle prefix"></i>
+                <input id="answer_2c" name="answer_2c" type="text" class="validate" required>
+                <label for="answer_2c">Answer</label>
+            </div>
+        </div>
+        
+        <!-- Day Rating -->
+        <div class="row">
+            <h5 class="center-align">Rate your day!</h5>
+            <p class="range-field">
+                <input type="range" name="day_rating" id="day_rating" min="0" max="5" />
+            </p>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="row">
+            <button type="submit" class="col s8 offset-m2 btn-large">
+                Save Entry
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
