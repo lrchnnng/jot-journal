@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- welcome message -->
 <div class="row">
     <div class="col s12 m8 offset-m2">
         <div class="card-panel">
@@ -10,6 +10,31 @@
         </div>
     </div>
 </div>
+
+<!-- Entry list -->
+<ul class="collapsible">
+    {% for entry in entries %}
+    <li>
+        <div class="collapsible-header">
+            <i class="fas fa-caret-down"></i>
+            <h4>{{ entry.date }}</h4> 
+            <h3>{{entry.title}}</h3>
+        </div>
+        <div class="collapsible-body">
+            <p>{{ entry.main_entry }}</p>
+            <strong>Top 3 part of today:</strong>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_1a }}</p>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_1b }}</p>
+            <p><i class="fas fa-heart"></i> {{ entry.answer_1c }}</p>
+            <strong>Top 3 hopes for tomorrow:</strong>
+            <p><i class="far fa-heart"></i> {{ entry.answer_2a }}</p>
+            <p><i class="far fa-heart"></i> {{ entry.answer_2b }}</p>
+            <p><i class="far fa-heart"></i> {{ entry.answer_2c }}</p>
+            <p><strong>Today was {{ entry.day_rating }}/5</strong></p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 <!-- Link to register -->
 <div class="row">
     <div class="col s12">

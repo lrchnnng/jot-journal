@@ -5,7 +5,7 @@
 <h3 class="center">Create Entry</h3>
 
 <div class="row">
-    <form class="col s8 offset-s2" method="POST" action="">
+    <form class="col s8 offset-s2" method="POST" action="{{ url_for('create_entry' )}}">
         <!-- Date -->
         <div class="row">
             <div class="input-field col s12">
@@ -28,7 +28,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix"></i>
                 <textarea id="main_entry" name="main_entry" minlength="5" maxlength="1000"
-                    class="materialize-textarea" required></textarea>
+                    class="materialize-textarea validate" required></textarea>
                 <label for="main_entry">Main entry</label>
             </div>
         </div>
@@ -67,7 +67,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-regular fa-circle prefix"></i>
-                <input id="answer_2a" name="answer_2a" type="text" minlength="5" maxlength="100" class="validate"
+                <input id="answer_2a" name="answer_2a" type="text" minlength="5" 
+                    maxlength="100" class="validate"
                     required>
                 <label for="answer_2a">Answer</label>
             </div>

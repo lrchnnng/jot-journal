@@ -92,16 +92,39 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    
+    # finds entries for current user
+    entries = mongo.db.entries.find(
+            {"username": username})
 
     if session["user"]:
-        return render_template("profile.html", username=username, )
+        return render_template("profile.html", username=username, entries=entries)
 
+    print("Entries:", entries) 
     return redirect(url_for("login"))
 
  
-@app.route("/create_entry")
+@app.route("/create_entry", methods=["GET", "POST"])
 def create_entry():
-    return render_template("create_entry.html")
+    if request.method == "POST":
+        task = {
+            "date": request.form.get("date"),
+            "title": request.form.get("title"),
+            "main_entry": request.form.get("main_entry"),
+            "answer_1a": request.form.get("answer_1a"),
+            "answer_1b": request.form.get("answer_1b"),
+            "answer_1c": request.form.get("answer_1c"),
+            "answer_2a": request.form.get("answer_2a"),
+            "answer_2b": request.form.get("answer_2b"),
+            "answer_2c": request.form.get("answer_2c"),
+            "day_rating": request.form.get("day_rating"),
+            }
+        mongo.db.tasks.insert_one(task)
+        flash("Entry Successfully Added")
+        return redirect(url_for('profile', username=session['user']) )
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("create_entry.html", categories=categories)
 
 
 if __name__ == "__main__":
