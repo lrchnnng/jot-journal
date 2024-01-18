@@ -94,20 +94,18 @@ def profile(username):
         {"username": session["user"]})["username"]
     
     # finds entries for current user
-    entries = mongo.db.entries.find(
-            {"username": username})
+    entries = mongo.db.entries.find({"user_id": ObjectId(user_id)})
 
     if session["user"]:
         return render_template("profile.html", username=username, entries=entries)
 
-    print("Entries:", entries) 
     return redirect(url_for("login"))
 
  
 @app.route("/create_entry", methods=["GET", "POST"])
 def create_entry():
     if request.method == "POST":
-        task = {
+        entry = {
             "date": request.form.get("date"),
             "title": request.form.get("title"),
             "main_entry": request.form.get("main_entry"),
@@ -119,7 +117,7 @@ def create_entry():
             "answer_2c": request.form.get("answer_2c"),
             "day_rating": request.form.get("day_rating"),
             }
-        mongo.db.tasks.insert_one(task)
+        mongo.db.entries.insert_one(entry)
         flash("Entry Successfully Added")
         return redirect(url_for('profile', username=session['user']) )
 
