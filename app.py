@@ -125,7 +125,6 @@ def create_entry():
 
 @app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
 def edit_entry(entry_id):
-    print("inside edit entry route")
     if request.method == "POST":
         recommend = "on" if request.form.get("recommended") else "off"
         submit = {
@@ -139,15 +138,16 @@ def edit_entry(entry_id):
             "publisher": request.form.get("publisher"),
             "recommended": recommend,
             "review_by": session["user"],
-            }
-        mongo.db.entries.update({"_id": ObjectId(entry_id)}, submit)
-        flash("Entry Successfully Updated")
-        return redirect(url_for('index', username=session['user']))
-        print("Form submitted")
+        }
+        entry_id_obj = ObjectId(entry_id)
+        mongo.db.entries.update_one({"_id": entry_id_obj}, {"$set": submit})
+        flash("Task Successfully Updated")
+        return redirect(url_for('index'))
 
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("edit_entry.html", entry=entry, genres=genres)
+
 
 
 if __name__ == "__main__":
