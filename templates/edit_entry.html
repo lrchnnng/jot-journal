@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3 class="center">Edit Entry</h3>
+
+<div class="row">
+    <form class="col s8 offset-s2" method="POST" action="{{ url_for('edit_entry', entry_id=entry._id) }}">
+        
+        <!-- Review Title-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-pen-nib prefix"></i>
+                <input name="entry_title" id="entry_title" minlength="5" 
+                    maxlength="50" type="text" class="validate">
+                <label for="entry_title">Review Title</label>
+            </div>
+        </div>
+
+        <!-- Book Title-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-book prefix"></i>
+                <input name="book_title" id="book_title" minlength="3" 
+                    maxlength="100" type="text" class="validate">
+                <label for="book_title">Book Title</label>
+            </div>
+        </div>
+
+        <!-- Author Name-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-person prefix"></i>
+                <input name="author_name" id="author_name" minlength="3" 
+                    maxlength="50" type="text" class="validate">
+                <label for="author_name">Author Name</label>
+            </div>
+        </div>
+        
+        <!-- Genre selection -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix"></i>
+                <select id="genre_name" name="genre_name" class="validate">
+                    <option value="" disabled selected>Choose Genre</option>
+                    {% for genre in genres %}
+                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="genre_name">Book Genre</label>
+            </div>
+        </div>
+
+        <!-- Review Entry -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-comment prefix"></i>
+                <textarea id="review" name="review" type="textarea" minlength="5" maxlength="1000"
+                    class="materialize-textarea validate"></textarea>
+                <label for="review">Review</label>
+            </div>
+        </div>
+
+        <!-- Date -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-calendar prefix"></i>
+                <input type="text" class="datepicker" id="publish_date" class="validate" 
+                    name="publish_date">
+                <label for="publish_date">Publish Date</label>
+            </div>
+        </div>
+        
+        <!-- Publisher Name-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-house prefix"></i>
+                <input name="publisher" id="publisher" minlength="3" 
+                    maxlength="50" type="text" class="validate">
+                <label for="publisher">Publisher Name</label>
+            </div>
+        </div>
+
+        <!-- Recommendation -->
+        <div class="row">
+            <p>Would you recommend this book?</p>
+            <div class="switch">
+                <label>
+                    No
+                    <input name="recommended" id="recommended" type="checkbox">
+                    <span class="lever"></span>
+                    Yes
+                </label>
+            </div>
+        </div>
+        
+        <!-- Date -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-calendar-days prefix"></i>
+                <input type="text" class="datepicker" id="review_date" name="review_date">
+                <label for="review_date">Review Date</label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="row">
+            <button type="submit" class="col s8 offset-m2 btn-large">
+                Save Entry
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -123,6 +123,14 @@ def create_entry():
     return render_template("create_entry.html", genres=genres)
 
 
+@app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
+def edit_entry(entry_id):
+    entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
+    
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    return render_template("edit_entry.html", entry=entry, genres=genres)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
