@@ -117,7 +117,7 @@ def create_entry():
             }
         mongo.db.entries.insert_one(entry)
         flash("Entry Successfully Added")
-        return redirect(url_for('index', username=session['user']))
+        return redirect(url_for('index'))
 
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("create_entry.html", genres=genres)
@@ -125,8 +125,27 @@ def create_entry():
 
 @app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
 def edit_entry(entry_id):
+    print("inside edit entry route")
+    if request.method == "POST":
+        recommend = "on" if request.form.get("recommended") else "off"
+        submit = {
+            "entry_title": request.form.get("entry_title"),
+            "review_date": request.form.get("review_date"),
+            "book_title": request.form.get("book_title"),
+            "author_name": request.form.get("author_name"),
+            "genre": request.form.get("genre_name"),
+            "review": request.form.get("review"),
+            "publish_date": request.form.get("publish_date"),
+            "publisher": request.form.get("publisher"),
+            "recommended": recommend,
+            "review_by": session["user"],
+            }
+        mongo.db.entries.update({"_id": ObjectId(entry_id)}, submit)
+        flash("Entry Successfully Updated")
+        return redirect(url_for('index', username=session['user']))
+        print("Form submitted")
+
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
-    
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("edit_entry.html", entry=entry, genres=genres)
 

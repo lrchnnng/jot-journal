@@ -44,7 +44,7 @@
                 <select id="genre_name" name="genre_name" class="validate" required>
                     <option value="" disabled>Choose Genre</option>
                     {% for genre in genres %}
-                        {% if genre.genre_name == entry.genres %}
+                        {% if genre.genre_name == entry.genre %}
                             <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option>
                         {% else %}
                             <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
