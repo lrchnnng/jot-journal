@@ -6,95 +6,70 @@
 
 <div class="row">
     <form class="col s8 offset-s2" method="POST" action="{{ url_for('create_entry')}}">
-        <!-- Date -->
+        
+        <!-- Review Title-->
         <div class="row">
             <div class="input-field col s12">
-                <input type="text" class="datepicker" id="date" name="date" required>
-            </div>
-        </div>
-
-        <!-- Entry Title-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-pencil-alt prefix"></i>
-                <input placeholder="Create entry title" name="title" id="title" minlength="5" 
+                <i class="fa-solid fa-pen-nib prefix"></i>
+                <input name="entry_title" id="entry_title minlength="5" 
                     maxlength="50" type="text" class="validate" required>
-                <label for="title">Entry Title</label>
+                <label for="entry_title">Review Title</label>
             </div>
         </div>
 
-        <!-- Main Entry -->
+        <!-- Book Title-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-book prefix"></i>
+                <input name="book_title" id="book_title" minlength="3" 
+                    maxlength="100" type="text" class="validate" required>
+                <label for="book_title">Book Title</label>
+            </div>
+        </div>
+
+        <!-- Author Name-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-person prefix"></i>
+                <input name="author_name" id="author_name minlength="3" 
+                    maxlength="50" type="text" class="validate" required>
+                <label for="author_name">Author Name</label>
+            </div>
+        </div>
+        
+        <!-- Genre selection -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix"></i>
+                <select id="genre_name" name="genre_name" class="validate" required>
+                    <option value="" disabled selected>Choose Genre</option>
+                    {% for genre in genres %}
+                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="genre_name">Book Genre</label>
+            </div>
+        </div>
+
+        <!-- Review Entry -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix"></i>
                 <textarea id="main_entry" name="main_entry" minlength="5" maxlength="1000"
                     class="materialize-textarea validate" required></textarea>
-                <label for="main_entry">Main entry</label>
+                <label for="main_entry">Review</label>
             </div>
         </div>
 
-        <!-- Prompt 1 -->
-        <div class="row">
-            <h5 class="prompt center-align">Top 3 moments of today:</h3>
-                <div class="input-field col s12">
-                    <i class="fa-solid fa-circle prefix"></i>
-                    <input id="answer_1a" name="answer_1a" type="text" minlength="5" 
-                        maxlength="100" class="validate">
-                    <label for="answer_1a">Answer</label>
-                </div>
-        </div>
+
+
+        <!-- Date -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-circle prefix"></i>
-                <input id="answer_1b" name="answer_1b" type="text"minlength="5" 
-                    maxlength="100" class="validate">
-                <label for="answer_1b">Answer</label>
+                <i class="fa-solid fa-calendar-days prefix"></i>
+                <input type="text" class="datepicker" id="date" name="date" required>
+                <label for="date">Review Date</label>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fa-solid fa-circle prefix"></i>
-                <input id="answer_1c" name="answer_1c" type="text" minlength="5" 
-                    maxlength="100" class="validate" >
-                <label for="answer_1c">Answer</label>
-            </div>
-        </div>
-        
-        <!-- Prompt 2 -->
-        <div class="row">
-            <h5 class="prompt center-align">Top 3 hopes for tomorrow:</h3>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fa-regular fa-circle prefix"></i>
-                <input id="answer_2a" name="answer_2a" type="text" minlength="5" 
-                    maxlength="100" class="validate">
-                <label for="answer_2a">Answer</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fa-regular fa-circle prefix"></i>
-                <input id="answer_2b" name="answer_2b" type="text" minlength="5" 
-                    maxlength="100" class="validate">
-                <label for="answer_2b">Answer</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fa-regular fa-circle prefix"></i>
-                <input id="answer_2c" name="answer_2c" type="text" minlength="5" 
-                    maxlength="100" class="validate">
-                <label for="answer_2c">Answer</label>
-            </div>
-        </div>
-        
-        <!-- Day Rating -->
-        <div class="row">
-            <h5 class="center-align">Rate your day!</h5>
-            <p class="range-field">
-                <input type="range" name="day_rating" id="day_rating" min="0" max="5" />
-            </p>
         </div>
 
         <!-- Submit Button -->

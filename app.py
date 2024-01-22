@@ -108,7 +108,7 @@ def create_entry():
             "review_date": request.form.get("review_date"),
             "book_title": request.form.get("book_title"),
             "author_name": request.form.get("author_name"),
-            "genre": request.form.get("genre"),
+            "genres": request.form.get("genres"),
             "review": request.form.get("review"),
             "publish_date": request.form.get("publish_date"),
             "publisher": request.form.get("publisher"),
@@ -119,7 +119,7 @@ def create_entry():
         flash("Entry Successfully Added")
         return redirect(url_for('index', username=session['user']))
 
-    genres = mongo.db.categories.find().sort("genre", 1)
+    genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("create_entry.html", genres=genres)
 
 

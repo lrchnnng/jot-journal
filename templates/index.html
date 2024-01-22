@@ -19,7 +19,6 @@
         <div class="col s12">
           <div class="card-panel white black-text left-align">
             <h4>{{ entry.entry_title }}</h4>
-            <p>Review Date: {{ entry.review_date }}</p>
             <p>Book: <strong>{{ entry.book_title }}</strong></p>
             <p>Author: {{ entry.author_name }}</p>
             <p>Genre: {{ entry.genre }}</p>
@@ -33,6 +32,7 @@
                         <i class="fa-solid fa-xmark"></i>
                 {% endif %}
             </p>
+            <p>Review Date: {{ entry.review_date }}</p>
             <p>Reviewed by: {{ entry.reviewed_by }}</p>
           </div>
         </div>
