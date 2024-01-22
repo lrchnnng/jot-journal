@@ -21,7 +21,7 @@
             <h4>{{ entry.entry_title }}</h4>
             <p>Book: <strong>{{ entry.book_title }}</strong></p>
             <p>Author: {{ entry.author_name }}</p>
-            <p>Genre: {{ entry.genre }}</p>
+            <p>Genre: {{ entry.genres }}</p>
             <p>Review: {{ entry.review }}</p>
             <p>Publish Date: {{ entry.publish_date }}</p>
             <p>Publisher: {{ entry.publisher }}</p>
@@ -33,7 +33,7 @@
                 {% endif %}
             </p>
             <p>Review Date: {{ entry.review_date }}</p>
-            <p>Reviewed by: {{ entry.reviewed_by }}</p>
+            <p>Reviewed by: {{ entry.review_by }}</p>
           </div>
         </div>
         {% endfor %}

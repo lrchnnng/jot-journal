@@ -108,7 +108,7 @@ def create_entry():
             "review_date": request.form.get("review_date"),
             "book_title": request.form.get("book_title"),
             "author_name": request.form.get("author_name"),
-            "genres": request.form.get("genres"),
+            "genres": request.form.get("genre_name"),
             "review": request.form.get("review"),
             "publish_date": request.form.get("publish_date"),
             "publisher": request.form.get("publisher"),
