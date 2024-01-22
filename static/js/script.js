@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('.datepicker').datepicker({
       format: "dd mmm yyyy,",
-      yearRange: 2,
+      yearRange: 100,
       showClearBtn: true,
       i18n: {
           done: "Select"
