@@ -4,13 +4,40 @@
 <div class="container center">
     <div>
         <h1>Jot</h1>
-        <h2>A 5 minute journal app</h2>
+        <h2>A collaborative book review journal</h2>
     </div>
-    
+    {% if session.user %}
+    {% else %}
     <div class="center">
         <a href="{{ 'register' }}" type="button" class="white-text btn-large">Register</a>
         <a href="{{ 'login' }}" type="button" class="white-text btn-large">Log In</a>
     </div>
+    {% endif %}
+    
+    <div class="row">
+        {% for entry in entries %}
+        <div class="col s12">
+          <div class="card-panel white black-text left-align">
+            <h4>{{ entry.entry_title }}</h4>
+            <p>Review Date: {{ entry.review_date }}</p>
+            <p>Book: <strong>{{ entry.book_title }}</strong></p>
+            <p>Author: {{ entry.author_name }}</p>
+            <p>Genre: {{ entry.genre }}</p>
+            <p>Review: {{ entry.review }}</p>
+            <p>Publish Date: {{ entry.publish_date }}</p>
+            <p>Publisher: {{ entry.publisher }}</p>
+            <p>Recommends: 
+                {% if entry.recommended == "on" %}
+                    <i class="fa-solid fa-check"></i>
+                    {% else %}
+                        <i class="fa-solid fa-xmark"></i>
+                {% endif %}
+            </p>
+            <p>Reviewed by: {{ entry.reviewed_by }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     
 </div>
 

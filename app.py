@@ -54,68 +54,73 @@ def register():
 def login():
     if request.method == "POST":
         # check if username exists in db
-        if existing_user and check_password_hash(existing_user["password"], request.form.get("password")):
-            session["user_id"] = str(existing_user["_id"])
-            session["user"] = existing_user["username"]
-            flash("Welcome to Jot, {}".format(existing_user["username"]))
-            return redirect(url_for("profile", username=existing_user["username"]))
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # ensure hashed password matches user input
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))
+            else:
+                # invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
 
         else:
-            # username doesn't exist or password is incorrect
+            # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # grab the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        return render_template("profile.html", username=username)
     
+    return redirect(url_for("login"))
+
 
 @app.route("/logout")
 def logout():
     #remove user from session cookie
     flash("You have been logged out")
-    session.clear()
+    session.pop("user")
     return redirect(url_for("login"))
-
-
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    # Ensure the user is logged in
-    if "user_id" not in session:
-        return redirect(url_for("login"))
-
-    # grab the session user's user_id from the session
-    user_id = ObjectId(session["user_id"])
-
-    # find entries for the current user using user_id
-    entries = mongo.db.entries.find({"user_id": user_id})
-
-    if session["user"]:
-        return render_template("profile.html", username=username, entries=entries)
-
-    return redirect(url_for("login"))
-
-
+ 
  
 @app.route("/create_entry", methods=["GET", "POST"])
 def create_entry():
     if request.method == "POST":
+        recommend = "on" if request.form.get("recommended") else "off"
         entry = {
-            "date": request.form.get("date"),
-            "title": request.form.get("title"),
-            "main_entry": request.form.get("main_entry"),
-            "answer_1a": request.form.get("answer_1a"),
-            "answer_1b": request.form.get("answer_1b"),
-            "answer_1c": request.form.get("answer_1c"),
-            "answer_2a": request.form.get("answer_2a"),
-            "answer_2b": request.form.get("answer_2b"),
-            "answer_2c": request.form.get("answer_2c"),
-            "day_rating": request.form.get("day_rating"),
+            "entry_title": request.form.get("entry_title"),
+            "review_date": request.form.get("review_date"),
+            "book_title": request.form.get("book_title"),
+            "author_name": request.form.get("author_name"),
+            "genre": request.form.get("genre"),
+            "review": request.form.get("review"),
+            "publish_date": request.form.get("publish_date"),
+            "publisher": request.form.get("publisher"),
+            "recommended": recommend,
+            "review_by": session["user"],
             }
         mongo.db.entries.insert_one(entry)
         flash("Entry Successfully Added")
-        return redirect(url_for('profile', username=session['user']))
+        return redirect(url_for('index', username=session['user']))
 
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("create_entry.html", categories=categories)
+    genres = mongo.db.categories.find().sort("genre", 1)
+    return render_template("create_entry.html", genres=genres)
 
 
 if __name__ == "__main__":
