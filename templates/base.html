@@ -10,8 +10,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   {% block styles %}
   {% endblock %}
@@ -21,8 +22,8 @@
 <body>
   <header>
     <nav>
-      <div class="nav-wrapper">
-        <a href="{{ url_for('index') }}" class="brand-logo center">Jot</a>
+      <div class="nav-wrapper light-green lighten-2">
+        <a href="{{ url_for('index') }}" class="brand-logo right light-green-text text-darken-3">Jot</a>
         <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars icon"></i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -56,7 +57,7 @@
                 {% if messages %}
                 {% for message in messages %}
                 <div class="row flashes">
-                    <h4 class="pink lighten-1 white-text center-align">{{  message  }}</h4>
+                    <p class="light-green darken-3 white-text center-align">{{  message  }}</p>
                 </div>
                 {% endfor %}
                 {% endif %}

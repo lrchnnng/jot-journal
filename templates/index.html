@@ -3,8 +3,8 @@
 
 <div class="container center">
   <div>
-    <h1>Jot</h1>
-    <h2>A collaborative book review journal</h2>
+    <h1 class="light-green-text text-darken-4">Welcome to Jot!</h1>
+    <h2 class="light-green-text text-darken-2">A for collaborative book review app</h2>
   </div>
   {% if session.user %}
   {% else %}
@@ -14,7 +14,7 @@
   </div>
   {% endif %}
 
-  <!--  -->
+  <!-- generates a card for each entry -->
   {% for entry in entries %}
   <div class="row">
     <div class="col s12">
