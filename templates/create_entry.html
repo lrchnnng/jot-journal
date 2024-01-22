@@ -54,15 +54,44 @@
         <!-- Review Entry -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix"></i>
+                <i class="fa-solid fa-comment prefix"></i>
                 <textarea id="main_entry" name="main_entry" minlength="5" maxlength="1000"
                     class="materialize-textarea validate" required></textarea>
                 <label for="main_entry">Review</label>
             </div>
         </div>
 
+        <!-- Date -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-calendar prefix"></i>
+                <input type="text" class="datepicker" id="publish_date" name="publish_date">
+                <label for="publish_date">Publish Date</label>
+            </div>
+        </div>
+        
+        <!-- Publisher Name-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-house prefix"></i>
+                <input name="publisher" id="publisher" minlength="3" 
+                    maxlength="50" type="text" class="validate">
+                <label for="publisher">Publisher Name</label>
+            </div>
+        </div>
 
-
+        <!-- Recommendation -->
+        <p>Would you recommend this book?</p>
+        <div class="switch">
+            <label>
+              No
+              <input name="recommended" id="recommended" type="checkbox">
+              <span class="lever"></span>
+              Yes
+            </label>
+          </div>
+        <br>
+        
         <!-- Date -->
         <div class="row">
             <div class="input-field col s12">
