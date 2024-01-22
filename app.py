@@ -141,13 +141,19 @@ def edit_entry(entry_id):
         }
         entry_id_obj = ObjectId(entry_id)
         mongo.db.entries.update_one({"_id": entry_id_obj}, {"$set": submit})
-        flash("Task Successfully Updated")
+        flash("Entry Successfully Edited")
         return redirect(url_for('index'))
 
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("edit_entry.html", entry=entry, genres=genres)
 
+@app.route("/delete_entry/<entry_id>")
+def delete_entry(entry_id):
+    entry_id_obj = ObjectId(entry_id)
+    mongo.db.entries.delete_one({"_id": entry_id_obj})
+    flash("Entry Successfully Deleted")
+    return redirect(url_for("index"))
 
 
 if __name__ == "__main__":
