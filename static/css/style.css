@@ -7,21 +7,37 @@ h2 {
     font-size: 40px;
 }
 
+h3 {
+    font-family: 'Fredericka the Great', sans-serif;
+    font-size: clamp(2rem, 1.4886rem + 2.5568vw, 3.125rem);
+}
+
 .brand-logo {
     margin-right: 20px;
     font-family: 'Fredericka the Great', sans-serif;
 }
 
 .flashes {
-    height: 20px;
+    line-height: 40px;
+    width: 50%;
 }
+
+/* Profile Styling */
+.profile-message {
+    box-shadow: none;
+}
+
+.profile-buttons a {
+    margin: 10px
+}
+
+/* Button Styling */
 
 .btn-large {
     border-radius: 40px;
 }
 
 .register-card {
-    border: 1px solid green;
     box-shadow: none;
     border-radius: 20px;
 }
