@@ -42,15 +42,17 @@ h3 {
 }
 
 /* Register Page Styling */
+.register-card {
+    box-shadow: none;
+    background: #fafafa;
+    border-radius: 20px;
+    padding: 20px 20px 0 20px;
+}
 
 
 /* General Button Styling */
 .btn-large {
     border-radius: 40px;
-    margin: 20px 0;
+    margin: 20px 10px;
 }
 
-.register-card {
-    box-shadow: none;
-    border-radius: 20px;
-}
