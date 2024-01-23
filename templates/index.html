@@ -17,10 +17,10 @@
 
   <!-- generates a card for each entry -->
   {% for entry in entries %}
-  <div class="row s12">
-    <div class="col s12">
-      <div class="card-panel white black-text left-align">
-        <h4>{{ entry.entry_title }}</h4>
+  <div class="rows 12 m10 offset-m1 ">
+    <div class="col">
+      <div class="card-panel grey darken-2 white-text left-align">
+        <h5 class="orange-text text-lighten-2">{{ entry.entry_title }}</h5>
         <p>Book: <strong>{{ entry.book_title }}</strong></p>
         <p>Author: {{ entry.author_name }}</p>
         <p>Genre: {{ entry.genre }}</p>

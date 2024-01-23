@@ -18,6 +18,10 @@ h3 {
     font-size: clamp(2rem, 1.4886rem + 2.5568vw, 3.125rem);
 }
 
+h5 {
+    font-size: ;
+}
+
 /* Flashes styling*/
 .flashes {
     line-height: 40px;
