@@ -6,11 +6,11 @@ body {
 
 h1 {
     font-family: 'Fredericka the Great', sans-serif;
-    font-size: clamp(2.375rem, 1.1818rem + 5.9659vw, 5rem);
+    font-size: clamp(2.375rem, -1.0909rem + 17.3295vw, 10rem);
 }
 
 h2 {
-    font-size: clamp(1.125rem, 0.7841rem + 1.7045vw, 1.875rem);
+    font-size: clamp(1.5rem, 0.4773rem + 5.1136vw, 3.75rem);
 }
 
 h3 {
@@ -18,9 +18,7 @@ h3 {
     font-size: clamp(2rem, 1.4886rem + 2.5568vw, 3.125rem);
 }
 
-h5 {
-    font-size: ;
-}
+
 
 /* Flashes styling*/
 .flashes {
@@ -60,9 +58,157 @@ h5 {
     margin: 20px 10px;
 }
 
+.crud-btn {
+    margin-top: 20px;
+}
+
 .crud-btn a {
     border-radius: 40px;
     margin-right: 10px;
 }
-    
 
+
+/* Mobile */
+@media screen and (min-width:260px) {
+
+    /* Index Styling */
+    .entry-container {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+     /* Review Card Styling*/
+    .bold {
+        font-weight: bold;
+    }
+
+    .book-title {
+        font-size: 22px;
+    }
+
+    .author {
+        font-size: 20px;
+    }
+
+    .entry-title {
+        font-size: 18px;
+    }
+
+    .genre {
+        font-size: 16px;
+    }
+
+    .review {
+        font-size: 16px;
+    }
+
+    .book-info {
+        font-size: 14px;
+    }
+
+    .user-info {
+        font-size: 12px;
+    }
+    
+    .recommended i {
+        font-size: 20px;
+        margin: 5px 20px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    /* Index Styling */
+
+    .entry-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .card-panel {
+        margin: 5px;
+    }
+
+    /* Review Card Styling*/
+    .book-title {
+        font-size: 24px;
+    }
+
+    .author {
+        font-size: 22px;
+    }
+
+    .entry-title {
+        font-size: 20px;
+    }
+
+    .genre {
+        font-size: 18px;
+    }
+
+    .review {
+        font-size: 18px;
+    }
+
+    .book-info {
+        font-size: 16px;
+    }
+
+    .user-info {
+        font-size: 14px;
+    }
+    
+    .recommended i {
+        font-size: 22px;
+        margin: 5px 24px;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+
+    /* Index Styling */
+    .entry-container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .card-panel {
+        margin: 10px;
+    }
+
+    /* Review Card Styling*/
+    .book-title {
+        font-size: 28px;
+    }
+
+    .author {
+        font-size: 26px;
+    }
+
+    .entry-title {
+        font-size: 24px;
+    }
+
+    .genre {
+        font-size: 20px;
+    }
+
+    .review {
+        font-size: 22px;
+    }
+
+    .book-info {
+        font-size: 18px;
+    }
+
+    .user-info {
+        font-size: 16px;
+    }
+    
+    .recommended i {
+        font-size: 24px;
+        margin: 5px 30px;
+    }
+}
