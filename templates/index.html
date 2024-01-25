@@ -8,7 +8,7 @@
   </div>
   <div class="center home-buttons"></div>
   {% if session.user %}
-  <a href="{{ 'create_entry' }}" type="button" class="white-text btn-large grey darken-4">Create Entry</a>
+  <a href="{{ 'create_entry' }}" type="button" class="white-text btn-large red  accent-2">Create Entry</a>
   {% else %}
   <a href="{{ 'register' }}" type="button" class="white-text btn-large grey darken-4">Register</a>
   <a href="{{ 'login' }}" type="button" class="white-text btn-large grey darken-1">Log In</a>
@@ -19,7 +19,7 @@
 <!-- generates a card for each entry -->
 <div class="entry-container center">
   {% for entry in entries %}
-  <div class="card-panel grey darken-2 grey-text left-align">
+  <div class="card-panel grey darken-3 grey-text left-align">
     <div class="center">
       <p class="center red-text text-lighten-3 book-title">{{ entry.book_title }}
         <br>
@@ -29,7 +29,7 @@
     <p class="white-text entry-title bold">{{ entry.entry_title }}</p>
     <p>Genre
       <br>
-      <span class="white-text genre">{{ entry.genre }}</span>
+      <span class="red-text text-lighten-3 genre">{{ entry.genre }}</span>
     </p>
     <p>Review
       <br>
@@ -37,30 +37,30 @@
     </p>
     <p>Publish Date
       <br>
-      <span class="white-text book-info">{{ entry.publish_date }}</span>
+      <span class="red-text text-lighten-3 book-info">{{ entry.publish_date }}</span>
     </p>
     <p>Publisher
       <br>
-      <span class="white-text book-info">{{ entry.publisher }}</span>
+      <span class="red-text text-lighten-3 book-info">{{ entry.publisher }}</span>
     </p>
     <p class="recommended">Recommends
       <br>
       {% if entry.recommended == "on" %}
       <i class="fa-solid fa-check teal-text text-lighten-3 bold"></i>
       {% else %}
-      <i class="fa-solid fa-xmark deep-orange-text text-lighten-3 bold"></i>
+      <i class="fa-solid fa-xmark red-text text-lighten-2 bold"></i>
       {% endif %}
     </p>
     <p class="user-info right">{{ entry.review_by }} - {{ entry.review_date }}
     </p>
-
+    <br>
     <!-- only allows signed in users to edit and delete posts-->
     {% if session.user %}
-    <div class="s12 crud-btn">
-      <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="btn-small grey darken-4"><i
-          class="fa-solid fa-pencil grey-text text-lighten-5"></i></a>
-      <a href="{{ url_for('delete_entry', entry_id=entry._id) }}" class="btn-small grey lighten-2"><i
-          class="fa-solid fa-eraser grey-text text-darken-4"></i></a>
+    <div class="crud-btn">
+      <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="btn-small red lighten-4"><i
+          class="fa-solid fa-pencil grey-text text-darken-4"></i></a>
+      <a href="{{ url_for('delete_entry', entry_id=entry._id) }}" class="btn-small red lighten-2"><i
+          class="fas fa-trash-alt grey-text text-darken-3"></i></a>
     </div>
     {% else %}
     {% endif%}

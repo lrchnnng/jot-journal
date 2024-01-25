@@ -60,6 +60,8 @@ h3 {
 
 .crud-btn {
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
 }
 
 .crud-btn a {
@@ -78,7 +80,7 @@ h3 {
         margin: 20px;
     }
 
-     /* Review Card Styling*/
+    /* Review Card Styling*/
     .bold {
         font-weight: bold;
     }
@@ -110,11 +112,12 @@ h3 {
     .user-info {
         font-size: 12px;
     }
-    
+
     .recommended i {
         font-size: 20px;
         margin: 5px 20px;
     }
+    
 }
 
 /* Tablet */
@@ -158,10 +161,15 @@ h3 {
     .user-info {
         font-size: 14px;
     }
-    
+
     .recommended i {
         font-size: 22px;
         margin: 5px 24px;
+    }
+
+    /* Button Styling */
+    .btn-large {
+     font-size: 22px;
     }
 }
 
@@ -206,9 +214,14 @@ h3 {
     .user-info {
         font-size: 16px;
     }
-    
+
     .recommended i {
         font-size: 24px;
         margin: 5px 30px;
     }
+
+    /* Button Styling */
+    .btn-large {
+        font-size: 24px;   
+       }
 }
