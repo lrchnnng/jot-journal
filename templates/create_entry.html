@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<h3 class="center light-green-text text-darken-4">Create Entry</h3>
+<h3 class="center grey-text text-lighten-4">Create Entry</h3>
 
 <div class="row">
-    <form class="col s10 offset-s1 purple-text text-lighten-2" method="POST" action="{{ url_for('create_entry')}}">
+    <form class="col s10 offset-s1 red-text text-lighten-2" method="POST" action="{{ url_for('create_entry')}}">
         
         <!-- Review Title-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-pen-nib prefix"></i>
                 <input name="entry_title" id="entry_title" minlength="5" 
                     maxlength="50" type="text" class="validate" required>
@@ -19,7 +19,7 @@
 
         <!-- Book Title-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-book prefix"></i>
                 <input name="book_title" id="book_title" minlength="3" 
                     maxlength="100" type="text" class="validate" required>
@@ -29,7 +29,7 @@
 
         <!-- Author Name-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-person prefix"></i>
                 <input name="author_name" id="author_name" minlength="3" 
                     maxlength="50" type="text" class="validate" required>
@@ -37,9 +37,9 @@
             </div>
         </div>
         
-        <!-- Genre selection -->
+        <!-- Genre drop down selection -->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fas fa-folder-open prefix"></i>
                 <select id="genre_name" name="genre_name" class="validate" required>
                     <option value="" disabled selected>Choose Genre</option>
@@ -53,7 +53,7 @@
 
         <!-- Review Entry -->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-comment prefix"></i>
                 <textarea id="review" name="review" type="textarea" minlength="5" maxlength="1000"
                     class="materialize-textarea validate" required></textarea>
@@ -63,7 +63,7 @@
 
         <!-- Date -->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-calendar prefix"></i>
                 <input type="text" class="datepicker" id="publish_date" name="publish_date">
                 <label for="publish_date">Publish Date</label>
@@ -72,7 +72,7 @@
         
         <!-- Publisher Name-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-house prefix"></i>
                 <input name="publisher" id="publisher" minlength="3" 
                     maxlength="50" type="text" class="validate">
@@ -82,8 +82,8 @@
 
         <!-- Recommendation -->
         <div class="row">
-            <p>Would you recommend this book?</p>
-            <div class="switch">
+            <p class="center">Would you recommend this book?</p>
+            <div class="switch center">
                 <label>
                     No
                     <input name="recommended" id="recommended" type="checkbox">
@@ -95,7 +95,7 @@
         
         <!-- Date -->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-calendar-days prefix"></i>
                 <input type="text" class="datepicker" id="review_date" name="review_date" required>
                 <label for="review_date">Review Date</label>
@@ -104,7 +104,7 @@
 
         <!-- Submit Button -->
         <div class="row">
-            <button type="submit" class="col s8 offset-s2 m6 offset-m3 btn-large light-green lighten-2">
+            <button type="submit" class="col s8 offset-s2 m6 offset-m3 btn-large red lighten-2">
                 Save Entry
             </button>
         </div>

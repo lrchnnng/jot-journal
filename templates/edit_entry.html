@@ -2,17 +2,17 @@
 
 {% block content %}
 
-<h3 class="center light-green-text text-darken-4">Edit Entry</h3>
+<h3 class="center grey-text text-lighten-4">Edit Entry</h3>
 
 <div class="row">
-    <form class="col s10 offset-s1 light-green-text text-darken-3" method="POST" action="{{ url_for('edit_entry', entry_id=entry._id) }}">
+    <form class="col s10 offset-s1 red-text text-lighten-2" method="POST" action="{{ url_for('edit_entry', entry_id=entry._id) }}">
         
         <!-- Review Title-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-pen-nib prefix"></i>
                 <input name="entry_title" id="entry_title" minlength="5" maxlength="50" 
-                    type="text" class="validate" value="{{ entry.entry_title}}" required>
+                    type="text" class="validate white-text" value="{{ entry.entry_title}}" required>
                 <label for="entry_title">Review Title</label>
             </div>
         </div>
@@ -89,15 +89,15 @@
 
         <!-- Recommendation -->
         <div class="row">
-            <p>Would you recommend this book?</p>
-            <div class="switch">
+            <p class="center">Would you recommend this book?</p>
+            <div class="switch center">
                 <label>
                     {% if entry.recommended == "on" %}
                     <input name="recommended" id="recommended" type="checkbox" checked>
                     {% else %}
-                    No
                     <input name="recommended" id="recommended" type="checkbox">
                     {% endif %}
+                    No
                     <span class="lever"></span>
                     Yes
                 </label>

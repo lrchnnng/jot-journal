@@ -13,13 +13,6 @@ h2 {
     font-size: clamp(1.5rem, 0.4773rem + 5.1136vw, 3.75rem);
 }
 
-h3 {
-    font-family: 'Fredericka the Great', sans-serif;
-    font-size: clamp(2rem, 1.4886rem + 2.5568vw, 3.125rem);
-}
-
-
-
 /* Flashes styling*/
 .flashes {
     line-height: 40px;
@@ -29,7 +22,7 @@ h3 {
 
 /* Nav Bar Styling */
 .brand-logo {
-    margin-right: 20px;
+    margin: 0 20px;
     font-family: "Fredericka the Great", sans-serif;
 }
 
@@ -51,7 +44,6 @@ h3 {
     padding: 20px 20px 0 20px;
 }
 
-
 /* General Button Styling */
 .btn-large {
     border-radius: 40px;
@@ -72,6 +64,10 @@ h3 {
 
 /* Mobile */
 @media screen and (min-width:260px) {
+    h3 {
+        font-family: 'Fredericka the Great', sans-serif;
+        font-size: 36px;
+    }
 
     /* Index Styling */
     .entry-container {
@@ -122,8 +118,11 @@ h3 {
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-    /* Index Styling */
+    h3 {
+        font-size: 48px;
+    }
 
+    /* Index Styling */
     .entry-container {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -175,6 +174,9 @@ h3 {
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
+    h3 {
+        font-size: 56px;
+    }
 
     /* Index Styling */
     .entry-container {
