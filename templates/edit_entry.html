@@ -9,7 +9,7 @@
         
         <!-- Review Title-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-pen-nib prefix"></i>
                 <input name="entry_title" id="entry_title" minlength="5" maxlength="50" 
                     type="text" class="validate white-text" value="{{ entry.entry_title}}" required>
@@ -19,27 +19,27 @@
 
         <!-- Book Title-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-book prefix"></i>
                 <input name="book_title" id="book_title" minlength="3" maxlength="100" 
-                    type="text" class="validate" value="{{ entry.book_title}}" required>
+                    type="text" class="validate white-text" value="{{ entry.book_title}}" required>
                 <label for="book_title">Book Title</label>
             </div>
         </div>
 
         <!-- Author Name-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-person prefix"></i>
                 <input name="author_name" id="author_name" minlength="3" maxlength="50" 
-                type="text" class="validate" value="{{ entry.author_name}}" required>
+                type="text" class="validate white-text" value="{{ entry.author_name}}" required>
                 <label for="author_name">Author Name</label>
             </div>
         </div>
         
         <!-- Genre selection -->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fas fa-folder-open prefix"></i>
                 <select id="genre_name" name="genre_name" class="validate" required>
                     <option value="" disabled>Choose Genre</option>
@@ -57,10 +57,10 @@
 
         <!-- Review Entry -->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-comment prefix"></i>
                 <textarea id="review" name="review" type="textarea" minlength="5" maxlength="1000"
-                    class="materialize-textarea validate" required>
+                    class="materialize-textarea validate white-text" required>
                 {{- entry.review -}}
                 </textarea>
                 <label for="review">Review</label>
@@ -69,9 +69,9 @@
 
         <!-- Publishing Date -->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-calendar prefix"></i>
-                <input type="text" class="datepicker" id="publish_date" name="publish_date"
+                <input type="text" class="datepicker white-text" id="publish_date" name="publish_date"
                     value="{{ entry.publish_date}}">
                 <label for="publish_date">Publish Date</label>
             </div>
@@ -79,10 +79,10 @@
         
         <!-- Publisher Name-->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-house prefix"></i>
                 <input name="publisher" id="publisher" minlength="3" maxlength="50" 
-                    type="text" class="validate" value="{{ entry.publisher}}">
+                    type="text" class="validate white-text" value="{{ entry.publisher}}">
                 <label for="publisher">Publisher Name</label>
             </div>
         </div>
@@ -90,7 +90,7 @@
         <!-- Recommendation -->
         <div class="row">
             <p class="center">Would you recommend this book?</p>
-            <div class="switch center">
+            <div class="switch center white-text">
                 <label>
                     {% if entry.recommended == "on" %}
                     <input name="recommended" id="recommended" type="checkbox" checked>
@@ -106,9 +106,9 @@
         
         <!-- Date -->
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-calendar-days prefix"></i>
-                <input type="text" class="datepicker" id="review_date" name="review_date" 
+                <input type="text" class="datepicker white-text" id="review_date" name="review_date" 
                     value="{{ entry.review_date}}" required>
                 <label for="review_date">Review Date</label>
             </div>
@@ -118,10 +118,10 @@
         <div class="row">
             <div class="col s12 center">
                 <!-- cancel button -->
-                <a href="{{ url_for('index')}}" class="s12 btn-large red">
+                <a href="{{ url_for('index')}}" class="s12 btn-large red accent-2">
                     Cancel
                 </a>
-                <button type="submit" class="s12 btn-large purple lighten-2">
+                <button type="submit" class="s12 btn-large red lighten-3 grey-text text-darken-3">
                     Edit Task
                 </button>
             </div>
