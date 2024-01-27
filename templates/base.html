@@ -25,48 +25,75 @@
     <nav>
       <div class="nav-wrapper grey darken-4">
         <a href="{{ url_for('index') }}" class="brand-logo right grey-text text-lighten-1">Jot</a>
-        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars icon grey-text text-lighten-1"></i></a>
+        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i
+            class="fas fa-bars icon grey-text text-lighten-1"></i></a>
         <ul class="left hide-on-med-and-down">
           <li><a href="{{ url_for('index') }}">Home</a></li>
           {% if session.user %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a href="{{ url_for('create_entry') }}">Create Entry</a></li>
-            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+          <li><a href="{{ url_for('create_entry') }}">Create Entry</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           {% else %}
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
+          <li><a href="{{ url_for('login') }}">Log In</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
           {% endif %}
         </ul>
       </div>
     </nav>
-  
+
     <ul class="sidenav" id="mobile-demo">
       <li><a href="{{ url_for('index') }}">Home</a></li>
       {% if session.user %}
-        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-        <li><a href="{{ url_for('create_entry') }}">Create Entry</a></li>
-        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+      <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+      <li><a href="{{ url_for('create_entry') }}">Create Entry</a></li>
+      <li><a href="{{ url_for('logout') }}">Log Out</a></li>
       {% else %}
-        <li><a href="{{ url_for('login') }}">Log In</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
+      <li><a href="{{ url_for('login') }}">Log In</a></li>
+      <li><a href="{{ url_for('register') }}">Register</a></li>
       {% endif %}
     </ul>
   </header>
   <section>
     <!-- Flash messages -->
     {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                {% for message in messages %}
-                <div class="row flashes">
-                    <p class="grey darken-4 grey-text text-lighten-1 center-align">{{  message  }}</p>
-                </div>
-                {% endfor %}
-                {% endif %}
-                {% endwith %}
-                </section>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row flashes">
+      <p class="grey darken-4 grey-text text-lighten-1 center-align">{{  message  }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </section>
   {% block content %}
   {% endblock %}
+  <!-- End of flash messages -->
 
+  <!-- Footer -->
+  <footer class="page-footer grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12 ">
+          <h5 class="white-text footer-logo">Jot</h5>
+          <p class="white-text"> A collaborative book review app, share your book thoughts with others around the world!</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> - Instagram</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> - Facebook</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.pinterest.co.uk/" target="_blank"><i class="fab fa-pinterest-p"></i> - Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2024 Copyright Laura Channing
+      </div>
+    </div>
+  </footer>
+  <!-- End of footer-->
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
