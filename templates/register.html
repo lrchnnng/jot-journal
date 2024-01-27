@@ -4,27 +4,27 @@
 
 <h3 class="center grey-text text-lighten-5">Register</h3>
 <div class="row">
-    <form class="col s12 l6 offset-l3 grey-text text-lighten-5" method="POST" action="{{ url_for('register') }}">
-        <div class="card-panel register-card">
+    <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel grey darken-3 grey-text">
             <!-- Username input -->
             <div class="row">
-                <div class="input-field col s12 grey-text">
-                    <input id="username" name="username" type="text" minlength="5"
-                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                <div class="input-field col s10 offset-s1">
+                    <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate white-text" required>
                     <label for="username">Userame</label>
                 </div>
             </div>
             <!-- Password input -->
             <div class="row">
-                <div class="input-field col s12 grey-text">
-                    <input id="password" name="password" type="password" minlength="5"
-                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                <div class="input-field col s10 offset-s1">
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate white-text" required>
                     <label for="password">Password</label>
                 </div>
             </div>
             <!--- Register -->
             <div class="row ">
-                <button type="submit" class="col s10 offset-s1 btn-large grey darken-4">
+                <button type="submit" class="col s6 offset-s3 btn-large red accent-2">
                     Register
                 </button>
             </div>
@@ -37,7 +37,7 @@
     <div class="col s12">
         <p class="center-align grey-text">
             Already registered?
-            <a href="{{ url_for('login') }}" class="orange-text text-lighten-2">Log in Here</a>
+            <a href="{{ url_for('login') }}" class="red-text text-lighten-2">Log in Here</a>
         </p>
     </div>
 </div>
