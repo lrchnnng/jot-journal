@@ -12,7 +12,7 @@
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-pen-nib prefix"></i>
                 <input name="entry_title" id="entry_title" minlength="5" 
-                    maxlength="50" type="text" class="validate" required>
+                    maxlength="50" type="text" class="validate white-text" required>
                 <label for="entry_title">Review Title</label>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-book prefix"></i>
                 <input name="book_title" id="book_title" minlength="3" 
-                    maxlength="100" type="text" class="validate" required>
+                    maxlength="100" type="text" class="validate white-text" required>
                 <label for="book_title">Book Title</label>
             </div>
         </div>
@@ -32,7 +32,7 @@
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-person prefix"></i>
                 <input name="author_name" id="author_name" minlength="3" 
-                    maxlength="50" type="text" class="validate" required>
+                    maxlength="50" type="text" class="validate white-text" required>
                 <label for="author_name">Author Name</label>
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="row">
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fas fa-folder-open prefix"></i>
-                <select id="genre_name" name="genre_name" class="validate" required>
+                <select id="genre_name" name="genre_name" class="validate white-text" required>
                     <option value="" disabled selected>Choose Genre</option>
                     {% for genre in genres %}
                         <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
@@ -56,7 +56,7 @@
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-comment prefix"></i>
                 <textarea id="review" name="review" type="textarea" minlength="5" maxlength="1000"
-                    class="materialize-textarea validate" required></textarea>
+                    class="materialize-textarea validate white-text" required></textarea>
                 <label for="review">Review</label>
             </div>
         </div>
@@ -65,7 +65,7 @@
         <div class="row">
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-calendar prefix"></i>
-                <input type="text" class="datepicker" id="publish_date" name="publish_date">
+                <input type="text" class="datepicker white-text" id="publish_date" name="publish_date">
                 <label for="publish_date">Publish Date</label>
             </div>
         </div>
@@ -75,14 +75,14 @@
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-house prefix"></i>
                 <input name="publisher" id="publisher" minlength="3" 
-                    maxlength="50" type="text" class="validate">
+                    maxlength="50" type="text" class="validate white-text">
                 <label for="publisher">Publisher Name</label>
             </div>
         </div>
 
         <!-- Recommendation -->
         <div class="row">
-            <p class="center">Would you recommend this book?</p>
+            <p class="center white-text">Would you recommend this book?</p>
             <div class="switch center">
                 <label>
                     No
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fa-solid fa-calendar-days prefix"></i>
-                <input type="text" class="datepicker" id="review_date" name="review_date" required>
+                <input type="text" class="datepicker white-text" id="review_date" name="review_date" required>
                 <label for="review_date">Review Date</label>
             </div>
         </div>
