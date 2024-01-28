@@ -19,11 +19,22 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/index")
-def index():
-    entries = mongo.db.entries.find()
-    date = mongo.db.entries.find().sort("review_date", -1)
-    return render_template("index.html", entries=entries, date=date)
+@app.route("/index/<sort_option>")
+def index(sort_option="review_date"):
+    sort_order = 1
+
+    if sort_option == "author_name":
+        sort_field = "author_name"
+        flash("Sorting by author name")
+    elif sort_option == "book_title":
+        sort_field = "book_title"
+        flash("Sorting by book name")
+    else:
+        sort_field = "review_date"
+        sort_order = -1
+        flash("Sorting by review date")
+    entries = mongo.db.entries.find().sort(sort_field, sort_order)
+    return render_template("index.html", entries=entries, sort_option=sort_option)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -118,8 +129,8 @@ def create_entry():
         flash("Entry Successfully Added")
         return redirect(url_for('index'))
 
-    date = mongo.db.entries.find().sort("review_date", -1)
-    return render_template("create_entry.html", date=date)
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    return render_template("create_entry.html", genres=genres)
 
 
 @app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
@@ -144,8 +155,8 @@ def edit_entry(entry_id):
         return redirect(url_for('index'))
 
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
-    date = mongo.db.entries.find().sort("review_date", -1)
-    return render_template("edit_entry.html", entry=entry, date=date)
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    return render_template("edit_entry.html", entry=entry, genres=genres)
 
 @app.route("/delete_entry/<entry_id>")
 def delete_entry(entry_id):

@@ -9,6 +9,12 @@
   <div class="center home-buttons"></div>
   {% if session.user %}
   <a href="{{ 'create_entry' }}" type="button" class="white-text btn-large red accent-2">Create Entry</a>
+  <br>
+  <div class="row sort-buttons">
+    <a href="{{ url_for('index', sort_option='review_date') }}" class="btn-small grey darken-4">Sort by most recent</a>
+    <a href="{{ url_for('index', sort_option='book_title') }}" class="btn-small grey darken-4">Sort by book title</a>
+    <a href="{{ url_for('index', sort_option='author_name') }}" class="btn-small grey darken-4">Sort by author</a>
+  </div>
   {% else %}
   <a href="{{ 'register' }}" type="button" class="white-text btn-large red darken-2">Register</a>
   <a href="{{ 'login' }}" type="button" class="white-text btn-large red accent-2">Log In</a>

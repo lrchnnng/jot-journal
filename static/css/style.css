@@ -106,6 +106,10 @@ footer {
         box-shadow: 0px 0px 20px #fafafa2b;
     }
 
+    .sort-buttons {
+        margin: 10px 20px;
+    }
+
     /* Review Card Styling*/
     .bold {
         font-weight: bold;
