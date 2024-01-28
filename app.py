@@ -22,7 +22,8 @@ mongo = PyMongo(app)
 @app.route("/index")
 def index():
     entries = mongo.db.entries.find()
-    return render_template("index.html", entries=entries)
+    date = mongo.db.entries.find().sort("review_date", -1)
+    return render_template("index.html", entries=entries, date=date)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -117,8 +118,8 @@ def create_entry():
         flash("Entry Successfully Added")
         return redirect(url_for('index'))
 
-    genres = mongo.db.genres.find().sort("genre_name", 1)
-    return render_template("create_entry.html", genres=genres)
+    date = mongo.db.entries.find().sort("review_date", -1)
+    return render_template("create_entry.html", date=date)
 
 
 @app.route("/edit_entry/<entry_id>", methods=["GET", "POST"])
@@ -143,8 +144,8 @@ def edit_entry(entry_id):
         return redirect(url_for('index'))
 
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
-    genres = mongo.db.genres.find().sort("genre_name", 1)
-    return render_template("edit_entry.html", entry=entry, genres=genres)
+    date = mongo.db.entries.find().sort("review_date", -1)
+    return render_template("edit_entry.html", entry=entry, date=date)
 
 @app.route("/delete_entry/<entry_id>")
 def delete_entry(entry_id):
