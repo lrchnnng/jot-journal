@@ -2,7 +2,7 @@
 body {
     background-color: #424242;
     font-family: 'Open Sans', sans-serif;
-}
+  }
 
 h1 {
     font-family: 'Fredericka the Great', sans-serif;
@@ -25,19 +25,33 @@ h2 {
     font-family: "Fredericka the Great", sans-serif;
 }
 
-/* Footer Logo */
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 .footer-logo {
     font-family: "Fredericka the Great", sans-serif;
 }
 
+.links {
+    font-size: 16px;
+}
+
 /* Profile Styling */
 .profile-message {
-    box-shadow: none;
-    background: none;
+    padding: 60px 0;
+}
+
+.profile-buttons {
+   margin-bottom: 200px;
 }
 
 .profile-buttons a {
-    margin: 10px
+    margin: 10px;
 }
 
 /* Register Page Styling */
@@ -130,6 +144,10 @@ h2 {
         margin: 5px 20px;
     }
 
+    /* Profile Styling */
+    .profile-buttons {
+
+    }
 }
 
 /* Tablet */

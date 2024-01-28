@@ -53,6 +53,7 @@
       {% endif %}
     </ul>
   </header>
+  <main>
   <section>
     <!-- Flash messages -->
     {% with messages = get_flashed_messages() %}
@@ -67,29 +68,24 @@
   </section>
   {% block content %}
   {% endblock %}
+  </main>
   <!-- End of flash messages -->
 
   <!-- Footer -->
   <footer class="page-footer grey darken-4">
-    <div class="container">
+    <div class="container center">
       <div class="row">
         <div class="col l6 s12 ">
           <h5 class="white-text footer-logo">Jot</h5>
-          <p class="white-text"> A collaborative book review app, share your book thoughts with others around the world!</p>
+          <p class="white-text">© 2024 Copyright Laura Channing</p>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
+        <div class="links col l4 offset-l2 s12">
           <ul>
-            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> - Instagram</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> - Facebook</a></li>
-            <li><a class="grey-text text-lighten-3" href="https://www.pinterest.co.uk/" target="_blank"><i class="fab fa-pinterest-p"></i> - Pinterest</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i>  Instagram</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i>  Facebook</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://www.pinterest.co.uk/" target="_blank"><i class="fab fa-pinterest-p"></i>  Pinterest</a></li>
           </ul>
         </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2024 Copyright Laura Channing
       </div>
     </div>
   </footer>
