@@ -1,20 +1,4 @@
 # Build
-- Functionality
-    - Profile page
-    - Create entry page
-    - Edit entry function
-    - Delete entry function
-    - Add footer to base
-
-- Styling
-    - Index Page
-    - Navbar
-    - Profile page
-    - Create entry page
-    - register page
-    - log in page
-    - footer
-
 # README
 - Scope
     - Features

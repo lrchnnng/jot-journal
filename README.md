@@ -30,9 +30,14 @@
 
 ## 1. Website Information 
 Business goals: 
-* Allow user to create and log into a personal account
-* Allow users to save journal entries and revisit previous entries
-* Provide an easy to navigate website with a pleasant user experience
+* Allow user to register for an account
+* Allow user to log in to previously registered account
+* Allow user to view previously posted entries
+* Allow user to create a new book review entry
+* Allow user to edit book review entries
+* Allow user to delete a book review entry if they are logged in 
+* Allow user to log out of account
+* Allow user to access external social media pages
 
 ### 1.1 Website Sections: <!-- omit from toc -->
 1. Home
@@ -243,7 +248,7 @@ It's also possible to log in, commit and deploy your app via the command line:
 
     git commit -m "INSERT COMMIT MESSAGE"
     
-    git push 
+    git push
 
 ---
 
