@@ -1,4 +1,7 @@
 # Build
+
+    404 page 
+
 # README
 - Structure
     - Userflow
@@ -6,19 +9,6 @@
         - Add userflow screenshot
         - Link to images in table
         - Write description of userflow
-
-- Technologies
-    - Languages 
-        - Add Python link
-        - Create python badge
-        - Short description of how python was used
-    - Libraries
-        - Create and add materialize css badge
-    - Other
-        - Create MongoDB badge
-        - Add mongoDB link 
-        - Create Heroku badge
-        - Add heroku link
 
 - Testing 
     - Add testing link 
