@@ -1,10 +1,5 @@
 # Build
 # README
-- Scope
-    - Features
-        - Profile
-        - Create Entry
-
 - Structure
     - Userflow
         - Create userflow
