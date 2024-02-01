@@ -45,6 +45,7 @@ Business goals:
 3. Log in
 4. Profile
 5. Create Entry
+6. Edit Entry
 
 ---
 
