@@ -197,7 +197,7 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 
 ### Libraries <!-- omit in toc -->
-![Materialize CSS](https://img.shields.io/badge/materialize_css-white?style=flat-plastic&logo=figma&logoColor=black)
+![Materialize CSS](https://img.shields.io/badge/materialize_css-white?style=flat&logo=figma&logoColor=black)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
 
@@ -209,14 +209,19 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 ### Design <!-- omit in toc -->
 ![Static Badge](https://img.shields.io/badge/Google_Fonts-white?style=flat-plastic&logo=google&logoColor=black)
-![Static Badge](https://img.shields.io/badge/Figma-white?style=flat-plastic&logo=figma&logoColor=black)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)c
 
 [Google Fonts](https://fonts.google.com/): Used to add in specific fonts to the webpage.
 
 [Figma](https://www.figma.com/): Used to create userflow and wireframes.
 
 ### Other <!-- omit in toc -->
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
+[MongoDB](https://www.mongodb.com/): Used as linked database to store user information and user input
+
+[Heroku](https://www.heroku.com/home): Used connect front and back end and deploy site
 ---
 
 ## 4. Testing
