@@ -197,7 +197,6 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 
 ### Libraries <!-- omit in toc -->
-![Materialize CSS](https://img.shields.io/badge/materialize_css-white?style=flat)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
 
