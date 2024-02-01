@@ -169,7 +169,8 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 | Type | Image | Description|
 |:---:|---|---|
-|Typography|![google fonts](link)| description |
+|Typography - Title|![google fonts](/static/images/readme-img/typography-title.png)| I chose to use a bold but readable font that aligned with the idea of writing and books. I used this only for title text and logo text|
+|Typography - Main Text|![google fonts](/static/images/readme-img/typography-main.png)| I chose to use a simple sans serif font for the rest of the text on the page so as to keep the text easy to read |
 |Colours|![Colour Palette](link)| description |
 |Photography|| I chose not to use any images so as to keep the app as simple and clean as possible|
 

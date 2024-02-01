@@ -6,14 +6,7 @@
         - Add userflow screenshot
         - Link to images in table
         - Write description of userflow
-
-- Skeleton
-    - Wireframes
-        - Create mobile wireframes
-        - Create tablet/desktop wireframes
-        - Add wireframes screenshot 
-        - Link to images in table
-
+        
 - Surface
     - Typography
         - Choose font/s from Google
