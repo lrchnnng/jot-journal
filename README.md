@@ -85,16 +85,20 @@ The second plane of UX looks at the **scope** of the website. What does the user
 |`Nav Bar`|A responsive navigation bar that allows for easy navigation to every page of the site|
 |`H1`|Used for the app name|
 |`H2`|Used for the journal tagline|
-|`Button`|A button navigating to the register page|
-|`Button`|A button navigating to the log in page|
+|`Large Button`|A button navigating to the register page|
+|`Large Button`|A button navigating to the log in page|
+|`Small Button`|A button to sort entries by 'most recent'|
+|`Small Button`|A button to sort entries by 'book title'|
+|`Small Button`|A button to sort entries by 'author name'|
 |`Footer`|A simple footer section with site creator info, a text link and social media links|
 
 | Register |A page that allows the user to register for an account|
 |:---:|---|
 |`Nav Bar`|A responsive navigation bar that allows for easy navigation to every page of the site|
-|`H1`|Used for the title of the page|
+|`H3`|Used for the title of the page|
 |`Form`|A simple form allowing users to input a username and password in order to register for an account|
-|`Button`|A button to initiate registration|
+|`Large Button`|A button to initiate registration|
+|`Link`|A link to the log in page for users already registered|
 |`Footer`|A simple footer section with site creator info, a text link and social media links|
 
 | Log In |A page that allows the user to log in to their previously registered account|
@@ -102,24 +106,43 @@ The second plane of UX looks at the **scope** of the website. What does the user
 |`Nav Bar`|A responsive navigation bar that allows for easy navigation to every page of the site|
 |`H1`|Used for the title of the page|
 |`Form`|A simple form allowing users to input their username and password in order to log in to their account|
-|`Buttons`|Four buttons that log the users choice of answer|
+|`Large Button`|A button to initiate log in|
+|`Link`|A link to the register page for users not yet registered|
 |`Footer`|A simple footer section with site creator info, a text link and social media links|
 
-|Profile|A user specific page with previous journal entries|
+|Profile|A simple navigation page for users that have logged in|
 |:---:|---|
 |`Nav Bar`|A responsive navigation bar that allows for easy navigation to every page of the site|
 |`H1`|Used for the title of the page (a user specific message generated on log in)|
-|`Entry card`|A list of expandable cards allowing user to view previous entries| 
-|`Message`|A short message that changes depending on the user score|
+|`Large Button`|A button navigating user to index page (home of all entries)|
+|`Large Button`|A button navigating user to the create entry page|
+|`Large Button`|A button logging user out and redirecting to log in page|
 |`Footer`|A simple footer section with site creator info, a text link and social media links|
 
-|Create entry|A user specific page with previous journal entries|
+|Create entry|A form for users to fill in to create a new book review entry|
 |:---:|---|
 |`Nav Bar`|A responsive navigation bar that allows for easy navigation to every page of the site|
-|`H1`|Used for the title of the page|
-|`Form`|A form for users to fill in to create a new journal entry| 
-|`Message`|A short message that changes depending on the user score|
+|`H3`|Used for the title of the page|
+|`Form`|A form for users to fill in to create a new review entry| 
+|`Large Button`|A submit button that saves new entry to database|
 |`Footer`|A simple footer section with site creator info, a text link and social media links|
+
+|Edit entry|A form for users to fill in to edit an existingbook review entry|
+|:---:|---|
+|`Nav Bar`|A responsive navigation bar that allows for easy navigation to every page of the site|
+|`H3`|Used for the title of the page|
+|`Form`|A form for users to fill in to create a new review entry| 
+|`Large Button`|A cancel button that redirects user back to index page|
+|`Large Button`|A submit button that saves edited entry to database|
+|`Footer`|A simple footer section with site creator info, a text link and social media links|
+
+|Log out|A function that allows user to log out of account|
+|:---:|---|
+|`Button` & `Nav Link`|Featured in both nav bar and on profile page, this does not load a page, just initiated a function that logs the session user out of their account and redirects user back to log in page|
+
+|Flashes|A temporary message at the top of the page dependant on user interaction|
+|:---:|---|
+|`Flash Message`|When the user interacts with certain areas of the page a flash message is displayed at the top of the page. (i.e When the user successfully logs out a flash message appears saying 'You have been logged out') These messages lets the user know their desired action has been completed.|
 
 ### 2.3 Structure - Unfinished
 The structure plane deals with the organising and arrangment of elements within the user interface. Creating userflows to define how the user will interact with the page. A big goal of the structure plane is to ensure that the users can easily find and access the information they need.
