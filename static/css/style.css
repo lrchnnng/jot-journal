@@ -95,6 +95,10 @@ footer {
         font-size: 16px;
     }
 
+    .select-dropdown {
+        color: white;
+    }
+
     /* Index Styling */
     .entry-container {
         display: flex;
@@ -107,7 +111,11 @@ footer {
     }
 
     .sort-buttons {
-        margin: 10px 20px;
+        margin: 10px 40px;
+    }
+
+    .sort-btn {
+        margin: 10px;
     }
 
     /* Review Card Styling*/
