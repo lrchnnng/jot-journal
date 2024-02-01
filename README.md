@@ -197,7 +197,7 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 
 ### Libraries <!-- omit in toc -->
-![Materialize CSS](https://img.shields.io/badge/materialize_css-white?style=flat&logo=figma&logoColor=black)
+![Materialize CSS](https://img.shields.io/badge/materialize_css-white?style=flat)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
 
@@ -209,7 +209,7 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 ### Design <!-- omit in toc -->
 ![Static Badge](https://img.shields.io/badge/Google_Fonts-white?style=flat-plastic&logo=google&logoColor=black)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)c
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 [Google Fonts](https://fonts.google.com/): Used to add in specific fonts to the webpage.
 
