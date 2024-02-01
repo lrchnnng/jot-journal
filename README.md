@@ -58,9 +58,11 @@ This plane is the first, it involves identifying the goals and objectives of the
 
 **User and site goals**
 Target users for Jot:
-* Ages 11 - 16
-* Teenagers and pre-teens interested in documenting their day/mood
-* The audience is most likely female/non-binary however this is not a hard and fast target
+* Ages 13+ (I tried to style the web application in order to appeal to a broad age group)
+* Gender non specific
+* People who enjoy reading a wide variety of genres
+* People who enjoy reviewing books they have read
+* People who enjoy reading other's reviews of books
 
 First time and returning user goals: 
 * I want to register for an account.
@@ -71,7 +73,7 @@ First time and returning user goals:
 * I want to be able to delete previous entries.
 * I want to easiy and intuitively find my way around the site.
 
-While the app is a journal app, my goal was to create something that was incredibly simple but provided an enjoyable and aesthetically pleasing user experience with little to no guess work in regards to input and navigation features.
+While the app is a book review platform, my goal was to create something that was incredibly simple but provided an enjoyable and aesthetically pleasing user experience with little to no guess work in regards to input and navigation features.
 
 ### 2.2 Scope - Unfinished
 The second plane of UX looks at the **scope** of the website. What does the user have to do in order to reach both the user and the site owners goals for the website.
