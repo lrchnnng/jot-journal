@@ -6,12 +6,8 @@
         - Add userflow screenshot
         - Link to images in table
         - Write description of userflow
-        
+
 - Surface
-    - Typography
-        - Choose font/s from Google
-        - Add font screenshot
-        - Link to image in table
     - Colours
         - Pick a colour palette
         - Add palette screenshots
