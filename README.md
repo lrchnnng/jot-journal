@@ -179,15 +179,21 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 ## 3. Technologies Used
 
 ### Languages <!-- omit in toc -->
-![Static Badge](https://img.shields.io/badge/HTML-white?style=flat-plastic&logo=HTML5&logoColor=black)
-![Static Badge](https://img.shields.io/badge/CSS3-white?style=flat-plastic&logo=CSS3&logoColor=black)
-![Static Badge](https://img.shields.io/badge/JavaScript-white?style=flat-plastic&logo=JavaScript&logoColor=black)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): Used to create the basic structure of the webpage.
 
 [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics): Used to style the content within the webpage.
 
 [JavaScript](https://www.javascript.com/): Used with Materialize CSS in order to create a responsive drop down nav bar on mobile.
+
+[Python](https://www.python.org/): Used to link app to database and complete a variety of functions depending on user interactions in order to run the app.
+
+[Markdown](https://www.markdownguide.org/): Used to format README.md and TESTING.md.
 
 
 ### Libraries <!-- omit in toc -->

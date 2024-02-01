@@ -7,12 +7,6 @@
         - Link to images in table
         - Write description of userflow
 
-- Surface
-    - Colours
-        - Pick a colour palette
-        - Add palette screenshots
-        - Link to image in table
-
 - Technologies
     - Languages 
         - Add Python link
