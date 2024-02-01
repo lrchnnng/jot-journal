@@ -197,16 +197,19 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 
 ### Libraries <!-- omit in toc -->
-![Static Badge](https://img.shields.io/badge/jQuery-white?style=flat-plastic&logo=jquery&logoColor=black)
+![Materialize CSS](https://img.shields.io/badge/materialize_css-white?style=flat-plastic&logo=figma&logoColor=black)
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
 
 [Materialize CSS](https://materializecss.com/): Used to style site and add interactive components (eg. navbar and buttons)
 
 [jQuery](https://jquery.com/): Used to simplify and streamline JS code.
 
+[Jinja](https://jinja.palletsprojects.com/en/3.1.x/): Used to create generatable page templates and iterating statements.
+
 ### Design <!-- omit in toc -->
 ![Static Badge](https://img.shields.io/badge/Google_Fonts-white?style=flat-plastic&logo=google&logoColor=black)
 ![Static Badge](https://img.shields.io/badge/Figma-white?style=flat-plastic&logo=figma&logoColor=black)
-![Static Badge](https://img.shields.io/badge/Affinity_Designer-white?style=flat-plastic&logo=affinity&logoColor=black)
 
 [Google Fonts](https://fonts.google.com/): Used to add in specific fonts to the webpage.
 
