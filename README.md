@@ -5,7 +5,7 @@
 
 [Testing Documentation](link)
 
-[Live Site](link)
+[Live Site](https://jot-journal-2bfb14d7356f.herokuapp.com/)
 
 <br>
 
