@@ -169,46 +169,53 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 | Type | Image | Description|
 |:---:|---|---|
-|Typography - Title|![google fonts](/static/images/readme-img/typography-title.png)| I chose to use a bold but readable font that aligned with the idea of writing and books. I used this only for title text and logo text|
-|Typography - Main Text|![google fonts](/static/images/readme-img/typography-main.png)| I chose to use a simple sans serif font for the rest of the text on the page so as to keep the text easy to read |
-|Colours|![Colour Palette Grey](/static/images/readme-img/colours-grey.png)| I used the built in class name colour palettes from materialize to make colour picking and styling easier. |
-|Colours|![Colour Palette Red](/static/images/readme-img/colours-red.png)| I used the built in class name colour palettes from materialize to make colour picking and styling easier. |
+|Typography - Title|![google fonts](/static/images/readme-img/typography-title.png)| I chose to use a bold but readable font that gave the impression of being hand drawn, this fits with the idea of writing and journaling. I used this only for title text so that it visually differentiated the hierarchy of information on the page.|
+|Typography - Main Text|![google fonts](/static/images/readme-img/typography-main.png)| I chose to use a simple sans serif font for the rest of the text on the page, keeping the main bulk of the text in a simple, easy to read font keeps the design consistant and accessible.|
+|Colours|![Colour Palette Grey](/static/images/readme-img/colours-grey.png)| When deciding on a colour palette, I wanted to keep the web app as simple and readable as possible. By choosing a grey colour scheme with a red contrast colour I was able to achieve a higher level of contrast between background colours and text. From a development standpoint, I opted to use the built in class name colour palettes from Materialize CSS. This streamlined the styling stage of the project.|
+|Colours|![Colour Palette Red](/static/images/readme-img/colours-red.png)| For the buttons and clickable links I chose various shades of red from the Materialize CSS class name colour palette. By only having interactive parts of the page highlighted in red, the user can clearly identify these areas without having to guess.|
 
 ---
 
 ## 3. Technologies Used
 
 ### Languages <!-- omit in toc -->
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): Used to create the basic structure of the webpage.
 
 [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics): Used to style the content within the webpage.
 
-[JavaScript](https://www.javascript.com/): Used with Materialize CSS in order to create a responsive drop down nav bar on mobile.
+[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): Used to create the basic structure of the webpage.
 
-[Python](https://www.python.org/): Used to link app to database and complete a variety of functions depending on user interactions in order to run the app.
+[JavaScript](https://www.javascript.com/): Used with Materialize CSS in order to create a responsive drop down nav bar on mobile.
 
 [Markdown](https://www.markdownguide.org/): Used to format README.md and TESTING.md.
 
+[Python](https://www.python.org/): Used to link app to database and complete a variety of functions depending on user interactions in order to run the app.
 
-### Libraries <!-- omit in toc -->
+
+
+
+### Frameworks & Libraries <!-- omit in toc -->
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
 
 [Materialize CSS](https://materializecss.com/): Used to style site and add interactive components (eg. navbar and buttons)
 
+[Flask](https://flask.palletsprojects.com/en/3.0.x/): A Python framework used in conjunction with Jinja templating in order to quickly build web apps
+
 [jQuery](https://jquery.com/): Used to simplify and streamline JS code.
 
-[Jinja](https://jinja.palletsprojects.com/en/3.1.x/): Used to create generatable page templates and iterating statements.
+[Jinja](https://jinja.palletsprojects.com/en/3.1.x/): Used with flask and python to create generatable page templates and iterating statements.
 
 ### Design <!-- omit in toc -->
-![Static Badge](https://img.shields.io/badge/Google_Fonts-white?style=flat-plastic&logo=google&logoColor=black)
+![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?logo=google&logoColor=fff&style=for-the-badge)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
 
 [Google Fonts](https://fonts.google.com/): Used to add in specific fonts to the webpage.
 
@@ -221,6 +228,7 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 [MongoDB](https://www.mongodb.com/): Used as linked database to store user information and user input
 
 [Heroku](https://www.heroku.com/home): Used connect front and back end and deploy site
+
 ---
 
 ## 4. Testing

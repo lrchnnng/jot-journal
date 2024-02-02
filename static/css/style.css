@@ -26,6 +26,11 @@ h2 {
     font-size: 30px;
 }
 
+.nav-link {
+    font-size: 20px;
+    margin: 0 20px;
+}
+
 /* Footer */
 footer {
     position: relative;

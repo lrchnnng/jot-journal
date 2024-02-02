@@ -3,6 +3,10 @@
     404 page 
 
 # README
+
+- Technologies
+    Add FLASK!
+    
 - Structure
     - Userflow
         - Create userflow
