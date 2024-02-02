@@ -186,17 +186,16 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 
-[CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics): Used to style the content within the webpage.
+[CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics): 
+CSS (Cascading Style Sheets) allows developers to style HTML elements by defining properties such as colours, fonts and layout and enhances the user experience. It is also used to create responsivity.
 
-[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): Used to create the basic structure of the webpage.
+[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML): HTML (HyperText Markup Language) is the standard markup language for creating web pages and applicatons. It provides structure for the content of the page and allows the developer to organise and define the elements (i.e headings, paragraphs, images and links).
 
-[JavaScript](https://www.javascript.com/): Used with Materialize CSS in order to create a responsive drop down nav bar on mobile.
+[JavaScript](https://www.javascript.com/): JavaScript is a programming language used to create interactive and dynamic web pages while executing in the web browser. Within this web app, I used JavaScript to initialise premade components from Materialize CSS (responsive and collapsable nav bar, calender date picker and a dropdown select box)  
 
-[Markdown](https://www.markdownguide.org/): Used to format README.md and TESTING.md.
+[Markdown](https://www.markdownguide.org/): Designed to easily format text without complicated HTML. I used markdown to format and lay out both my README and TESTING documentation.
 
 [Python](https://www.python.org/): Used to link app to database and complete a variety of functions depending on user interactions in order to run the app.
-
-
 
 
 ### Frameworks & Libraries <!-- omit in toc -->
