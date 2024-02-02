@@ -195,7 +195,7 @@ CSS (Cascading Style Sheets) allows developers to style HTML elements by definin
 
 [Markdown](https://www.markdownguide.org/): Designed to easily format text without complicated HTML. I used markdown to format and lay out both my README and TESTING documentation.
 
-[Python](https://www.python.org/): Used to link app to database and complete a variety of functions depending on user interactions in order to run the app.
+[Python](https://www.python.org/): A versatile programming language known for its readability and simplicity. Encouraging clean and efficient code, it has a number of different applications from front end to back end. I have used Python to link the app to database as well as, depending on user interactions, executing a variety of functions (i.e register, log in, log out and all CRUD functions). 
 
 
 ### Frameworks & Libraries <!-- omit in toc -->
