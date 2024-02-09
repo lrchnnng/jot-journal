@@ -213,7 +213,7 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) is a templating engine for Python, commonly used in development frameworks like Flask and Django. It allows the developer to seamlessly embed dynamic content within HTML allowing the use of variables, control structures and filters. I used Jinja to create HTML templates as well as iterate and display entries. I also used Jinja templating to show or hide certain aspects of the web app depending on if the user is logged in or not.
 
-![Materialize CSS](https://img.shields.io/badge/Materialize--CSS-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+![Materialize CSS](https://img.shields.io/badge/Materialize--CSS-0081CB?style=for-the-badge)
 
 [Materialize CSS](https://materializecss.com/) is a front-end framework following Google's material design principles. It provides a collection of pre-designed components, styles and animations to simplify the building process. I used the responsive nav bar and footer components along with the pre-built buttons and form input fields. I also used Materialize CSS to style the web application.
 

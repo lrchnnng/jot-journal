@@ -33,8 +33,13 @@ def index(sort_option="review_date"):
         sort_field = "review_date"
         sort_order = -1
         flash("Sorting by review date")
+        
+    # Store the currently selected sort option
+    selected_sort_option = sort_option
+    
     entries = mongo.db.entries.find().sort(sort_field, sort_order)
-    return render_template("index.html", entries=entries, sort_option=sort_option)
+    return render_template("index.html", entries=entries, 
+        sort_option=sort_option, selected_sort_option=selected_sort_option)
 
 
 @app.route("/register", methods=["GET", "POST"])
