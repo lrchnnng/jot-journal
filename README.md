@@ -75,7 +75,7 @@ First time and returning user goals:
 
 While the app is a book review platform, my goal was to create something that was incredibly simple but provided an enjoyable and aesthetically pleasing user experience with little to no guess work in regards to input and navigation features.
 
-### 2.2 Scope - Unfinished
+### 2.2 Scope
 The second plane of UX looks at the **scope** of the website. What does the user have to do in order to reach both the user and the site owners goals for the website.
 
 #### Features <!-- omit in toc -->
@@ -155,7 +155,7 @@ I created a userflow diagram to show how the user will interact with each page o
 
 </details>
 
-### 2.4 Skeleton - Unfinished
+### 2.4 Skeleton
 This plane is a more refined view of the user interface. Looking at the layout and visual hierarchy to ensure the site is both visually appealing and functional. I created a set of wireframes for different screen sizes, this is a simplified version of the final product, removing colour, typography, imagery to create a basic view of website and establish the layout.
 
 | Mobile Wireframes | Desktop Wireframes |
@@ -164,7 +164,7 @@ This plane is a more refined view of the user interface. Looking at the layout a
 
 *Note: Some areas have changed between the wireframes and the final product, this is either due to making the page easier to navigate or an added function later in development.*
 
-### 2.5 Surface - Unfinished
+### 2.5 Surface
 The surface plane is the last layer and deals with the aesthetics of the user interface. This includes colour palettes, typography, graphics and visual style. The goal of this plane is to create a page that is visually pleasing and engaging for the user.
 
 | Type | Image | Description|
@@ -179,63 +179,35 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 ## 3. Technologies Used
 
 ### Languages <!-- omit in toc -->
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+[CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) (Cascading Style Sheets) - allows developers to style HTML elements by defining properties such as colours, fonts and layout and enhances the user experience. It is also used to create responsivity.
 
-[CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) (Cascading Style Sheets) allows developers to style HTML elements by defining properties such as colours, fonts and layout and enhances the user experience. It is also used to create responsivity.
+[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) (HyperText Markup Language) - the standard markup language for creating web pages and applicatons. It provides structure for the content of the page and allows the developer to organise and define the elements (i.e headings, paragraphs, images and links).
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+[JavaScript](https://www.javascript.com/) - a programming language used to create interactive and dynamic web pages while executing in the web browser. Within this web app, I used JavaScript to initialise premade components from Materialize CSS (responsive and collapsable nav bar, calender date picker and a dropdown select box)  
 
-[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) (HyperText Markup Language) is the standard markup language for creating web pages and applicatons. It provides structure for the content of the page and allows the developer to organise and define the elements (i.e headings, paragraphs, images and links).
+[Markdown](https://www.markdownguide.org/) - designed to easily format text without complicated HTML. I used markdown to format and lay out both my README and TESTING documentation.
 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
-[JavaScript](https://www.javascript.com/) is a programming language used to create interactive and dynamic web pages while executing in the web browser. Within this web app, I used JavaScript to initialise premade components from Materialize CSS (responsive and collapsable nav bar, calender date picker and a dropdown select box)  
-
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
-
-[Markdown](https://www.markdownguide.org/) is designed to easily format text without complicated HTML. I used markdown to format and lay out both my README and TESTING documentation.
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
-[Python](https://www.python.org/) is a versatile programming language known for its readability and simplicity. Encouraging clean and efficient code, it has a number of different applications from front end to back end. I have used Python to link the app to database as well as, depending on user interactions, executing a variety of functions (i.e register, log in, log out and all CRUD functions). 
+[Python](https://www.python.org/) - a versatile programming language known for its readability and simplicity. Encouraging clean and efficient code, it has a number of different applications from front end to back end. I have used Python to link the app to database as well as, depending on user interactions, executing a variety of functions (i.e register, log in, log out and all CRUD functions). 
 
 
 ### Frameworks & Libraries <!-- omit in toc -->
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+[Flask](https://flask.palletsprojects.com/en/3.0.x/) - a lightweight Python framework used in conjunction with Jinja templating in order to quickly and simply build and customise web applications. 
 
-[Flask](https://flask.palletsprojects.com/en/3.0.x/) is a lightweight Python framework used in conjunction with Jinja templating in order to quickly and simply build and customise web applications. 
+[jQuery](https://jquery.com/) - a fast and lightweight JavaScript libary used to simplify and streamline JavaScript code. It provides a set of easy to use built in functions that allow developers to manipulate HTML documents and handle events. I used jQuery to simplify the JavaScript code used to create interactivity and responsivity within the web app.
 
-![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+[Jinja](https://jinja.palletsprojects.com/en/3.1.x/) - a templating engine for Python, commonly used in development frameworks like Flask and Django. It allows the developer to seamlessly embed dynamic content within HTML allowing the use of variables, control structures and filters. I used Jinja to create HTML templates as well as iterate and display entries. I also used Jinja templating to show or hide certain aspects of the web app depending on if the user is logged in or not.
 
-[jQuery](https://jquery.com/) is a fast and lightweight JavaScript libary used to simplify and streamline JavaScript code. It provides a set of easy to use built in functions that allow developers to manipulate HTML documents and handle events. I used jQuery to simplify the JavaScript code used to create interactivity and responsivity within the web app.
-
-![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
-
-[Jinja](https://jinja.palletsprojects.com/en/3.1.x/) is a templating engine for Python, commonly used in development frameworks like Flask and Django. It allows the developer to seamlessly embed dynamic content within HTML allowing the use of variables, control structures and filters. I used Jinja to create HTML templates as well as iterate and display entries. I also used Jinja templating to show or hide certain aspects of the web app depending on if the user is logged in or not.
-
-![Materialize CSS](https://img.shields.io/badge/Materialize--CSS-0081CB?style=for-the-badge)
-
-[Materialize CSS](https://materializecss.com/) is a front-end framework following Google's material design principles. It provides a collection of pre-designed components, styles and animations to simplify the building process. I used the responsive nav bar and footer components along with the pre-built buttons and form input fields. I also used Materialize CSS to style the web application.
+[Materialize CSS](https://materializecss.com/) - a front-end framework following Google's material design principles. It provides a collection of pre-designed components, styles and animations to simplify the building process. I used the responsive nav bar and footer components along with the pre-built buttons and form input fields. I also used Materialize CSS to style the web application.
 
 ### Design <!-- omit in toc -->
+[Figma](https://www.figma.com/) - a design and prototyping tool used for UI/UX Design. I used figma to create responsive wireframes for each page of the web app.
 
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-
-[Figma](https://www.figma.com/) is a design and prototyping tool used for UI/UX Design. I used figma to create responsive wireframes for each page of the web app.
-
-![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?logo=google&logoColor=fff&style=for-the-badge)
-
-[Google Fonts](https://fonts.google.com/) is a free, open-sourcce collection of web fonts provided by Google. Using CSS I integrated and applied two of my selected fonts into the web app.
-
+[Google Fonts](https://fonts.google.com/) - a free, open-source collection of web fonts provided by Google. Using CSS I integrated and applied two of my selected fonts into the web app.
 
 ### Other <!-- omit in toc -->
-![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+[MongoDB](https://www.mongodb.com/) - a NoSQL database management system that stores data in a JSON-like format called BSON. It is designed to handle large volumes of unstructured or semi-structured data. I linked the database to the app in order to store user information and user input when executing CRUD functions.
 
-[MongoDB](https://www.mongodb.com/) is a NoSQL database management system that stores data in a JSON-like format called BSON. It is designed to handle large volumes of unstructured or semi-structured data. I linked the database to the app in order to store user information and user input when executing CRUD functions.
-
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-
-[Heroku](https://www.heroku.com/home) is a cloud platform as a service (PaaS) that simplifies the deployment, management and scaling of web applications. Using Heroku I was able to connect both front and back end of my app and deploy the site successfully.
+[Heroku](https://www.heroku.com/home) - a cloud platform as a service (PaaS) that simplifies the deployment, management and scaling of web applications. Using Heroku I was able to connect both front and back end of my app and deploy the site successfully.
 
 ---
 
@@ -309,32 +281,18 @@ It's also possible to log in, commit and deploy your app via the command line:
 ---
 
 ## 6. Credits and Acknowledgments
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
-![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
-![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?logo=google&logoColor=fff&style=for-the-badge)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+[Am I Responsive?](https://ui.dev/amiresponsive) - Used to generate a screenshot of the web application on multiple viewport sizes.
 
-- [Google Fonts](https://fonts.google.com/)
-  * Used to find fonts across the site.
-- [Figma](https://www.figma.com/)
-  * Used to create wireframes.
-- [ui.dev](https://ui.dev/amiresponsive)
-  * Used to create a mockup of web page on various screen sizes.
-- [Font-size Clamp Generator](https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMyMHB4IiwibWF4V2lkdGgiOiIxMDI0cHgiLCJtaW5Gb250U2l6ZSI6IjI0cHgiLCJtYXhGb250U2l6ZSI6IjYwcHgifQ%3D%3D): Used to create responsive text sizes.
-  * Used for responsive text.
-- [Materialize CSS](https://materializecss.com/)
-  * Used to create fully responsive navbar, buttons and images.
-- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
-  * Used for testing.
-- [JShint](https://jshint.com/)
-  * Used for testing.
+[Figma](https://www.figma.com/) - Used to create wireframes.
+
+[Font Awesome](https://fontawesome.com/) - Used to add icons to forms and for social media links in footer.
+
+[Font-size Clamp Generator](https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMyMHB4IiwibWF4V2lkdGgiOiIxMDI0cHgiLCJtaW5Gb250U2l6ZSI6IjI0cHgiLCJtYXhGb250U2l6ZSI6IjYwcHgifQ%3D%3D) - Used to create responsive text sizes.
+
+[Google Fonts](https://fonts.google.com/) - Used to find fonts across the site.
+
+[Materialize CSS](https://materializecss.com/) - Used to create fully responsive navbar and a variety of other components.
+
+
   
 ---

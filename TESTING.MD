@@ -25,12 +25,13 @@ Automated testing and manual testing, when used in combination, are able to achi
 
 Manual testing allows the tester to explore the site and using experience and creativity to find any issues within the site. It also takes into account flexibility and context, manual testing paramaters can be changed quickly depending on the requirements. The tester can also take into account the prospective users and their knowledge of the system in order to execute tests that are relevant.  
 
-| | Mobile S (320px)| Mobile L (425px)| Tablet (768px) | Desktop (1024px)|
+|Responsivity | Mobile S (320px)| Mobile L (425px)| Tablet (768px) | Desktop (1024px)|
 |---|:---:|:---:|:---:|:---:|
-|Responsive Images|✓|✓|✓|✓|
-|Responsive Elements|✓|✓|✓|✓|
+|Responsive UI Components|✓|✓|✓|✓|
 |Responsive Text|✓|✓|✓|✓|
+|Responsive Form|✓|✓|✓|✓|
 |Responsive Nav Bar|✓|✓|✓|✓|
+|Responsive Footer|✓|✓|✓|✓|
 
 |Nav Bar Testing|Yes/No|
 |---|:---:|
@@ -59,7 +60,19 @@ Manual testing allows the tester to explore the site and using experience and cr
 | | |
 
 ## User Story
-1. User goal
+1. I want to register for an account.
+
+2. I want to log in and log out of my account.
+
+3. I want to be able to create new entries.
+
+4. I want to be able to find and read previous entries.
+
+5. I want to be able to edit previous entries.
+
+6. I want to be able to delete previous entries.
+
+7. I want to easiy and intuitively find my way around the site.
   
   |Name|Screenshot|
   |:---:|:---:|
@@ -97,4 +110,12 @@ Automated tests are repeatable and reliable as there is limited risk for human e
 * Throughout development I used console logs to test that the functions worked as intended.
  ![quiz.js console](link)
 
- ## Known bugs and fixes 
+## Known bugs and fixes 
+- **Issue** with connecting MongoDB
+  - **Solution** adding in DB name to connection URL in env.py
+
+## Testing Credits
+- [JShint](https://jshint.com/)
+  * Used for testing.
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+  * Used for testing.

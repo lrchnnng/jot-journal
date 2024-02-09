@@ -32,7 +32,7 @@ def index(sort_option="review_date"):
     else:
         sort_field = "review_date"
         sort_order = -1
-        flash("Sorting by review date")
+        flash("Sorting by most recent")
         
     # Store the currently selected sort option
     selected_sort_option = sort_option

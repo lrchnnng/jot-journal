@@ -6,11 +6,11 @@ body {
 
 h1 {
     font-family: 'Fredericka the Great', sans-serif;
-    font-size: clamp(2.375rem, -1.0909rem + 17.3295vw, 10rem);
+    font-size: clamp(2.375rem, -0.5227rem + 14.4886vw, 8.75rem);
 }
 
 h2 {
-    font-size: clamp(1.5rem, 0.4773rem + 5.1136vw, 3.75rem);
+    font-size: clamp(1.5rem, 1.0455rem + 2.2727vw, 2.5rem);
 }
 
 /* Flashes styling*/
