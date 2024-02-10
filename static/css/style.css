@@ -101,9 +101,19 @@ footer {
         font-size: 16px;
     }
 
-    /* Dropdown Option*/
+    /* Dropdown Genre Option*/
     .select-dropdown {
         color: #fafafa;
+    }
+
+    .select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup {
+        color: #fafafa;
+        background-color: #E57373;
+    }
+
+    .dropdown-content li>a, .dropdown-content li>span {
+        color: #FF5252;
+        background-color: #b8b8b8;
     }
 
     /*Date Picker*/
