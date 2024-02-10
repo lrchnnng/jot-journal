@@ -28,7 +28,7 @@ def index(sort_option="review_date"):
         flash("Sorting by author name")
     elif sort_option == "book_title":
         sort_field = "book_title"
-        flash("Sorting by book name")
+        flash("Sorting by book title")
     else:
         sort_field = "review_date"
         sort_order = -1

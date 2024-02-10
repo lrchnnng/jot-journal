@@ -30,6 +30,7 @@ Manual testing allows the tester to explore the site and using experience and cr
 |Responsive UI Components|✓|✓|✓|✓|
 |Responsive Text|✓|✓|✓|✓|
 |Responsive Form|✓|✓|✓|✓|
+|Responsive Button Placement|✓|✓|✓|✓|
 |Responsive Nav Bar|✓|✓|✓|✓|
 |Responsive Footer|✓|✓|✓|✓|
 
@@ -38,26 +39,91 @@ Manual testing allows the tester to explore the site and using experience and cr
 |Nav bar text and styles are loaded|✓|
 |Nav bar collapse appears up to medium sized screens|✓|
 |Nav links work as intended|✓|
+|Nav logo directs user to index page|✓|
+|If user is **not** in session, nav bar shows `Home`, `Register` and `Log In` links|✓|
+|If user is in session, nav bar shows `Home`, `Profile`, `Create Entry` and `Log Out` links|✓|
+|`Home`link directs user to index page|✓|
+|`Register` link directs user to Register page|✓|
+|`Log In` link directs user to Log In page|✓|
+|`Profile` link directs user to Profile page|✓|
+|`Create Entry` link directs user to Creat Entry page|✓|
+|`Log Out` link logs user out and redirects to Log In page and displays a flash message at top of page|✓|
+
+|Footer Testing|Yes/No|
+|---|:---:|
+|Fonts and styling are loaded|✓|
+|Logo directs user to index page|✓|
+|`Instagram` link directs user to instagram site in a separate tab|✓|
+|`Facebook` link directs user to facebook site in a separate tab|✓|
+|`Pinterest` link directs user to pinterest site in a separate tab|✓|
 
 |Index Page Testing|Yes/No|
 |---|:---:|
-| | |
+|Font and styling are loaded|✓|
+|Components are loaded|✓|
+|`Register` button directs user to register page|✓|
+|`Log In` button directs user to log in page|✓|
+|`Sort by most recent` button sorts posts by most recent first|✓|
+|`Sort by book title` button sorts posts by book title in alphabetical order|✓|
+|`Sort by author` button sorts posts by author name in alphabetical order|✓|
+|Sort buttons display as disabled once selected|✓|
+|`Edit` button redirects user to the 'Edit Entry' Page|✓|
+|`Delete` button deletes the post|✓|
+|Flash message appears at top of page describing the sort order|✓|
+|If user is **not** in session `Register` and `Log In` buttons are shown|✓|
+|If user is in session only `Create Entry` button is shown|✓|
+|If user is **not** in session, `Edit` and `Delete` buttons are **not** shown|✓|
+|If user is in session, `Edit` and `Delete` buttons are shown|✓|
 
 |Register Page Testing|Yes/No|
 |---|:---:|
-| | |
+|Fonts and styles are loaded|✓|
+|Username input does not accept under 5 characters|✓|
+|Username input does not accept over 15 characters|✓|
+|Username input does not accept special characters|✓|
+|Password input does not accept under 5 characters|✓|
+|Password input does not accept over 15 characters|✓|
+|Password input does not accept special characters|✓|
+|`Register` button directs user to profile page|✓|
+|`Log In Here` link redirects user to Log In page|✓|
+|Flash message appears at top of page confirming successful registration|✓|
 
 |Log In Page Testing|Yes/No|
 |---|:---:|
-| | |
+|Fonts and styles are loaded|✓|
+|Username input does not accept under 5 characters|✓|
+|Username input does not accept over 15 characters|✓|
+|Username input does not accept special characters|✓|
+|Password input does not accept under 5 characters|✓|
+|Password input does not accept over 15 characters|✓|
+|Password input does not accept special characters|✓|
+|`Log In` button directs user to profile page|✓|
+|`Register Here` link redirects user to Log In page|✓|
 
 |Profile Page Testing|Yes/No|
 |---|:---:|
-| | |
+|Fonts and styles are loaded|✓|
+|Personalised message with session user username included|✓|
+|`View Entries` button directs user to index page|✓|
+|`Create Entry` button directs user to Create Entry page|✓|
+|`Log Out` button logs user out and redirects user to log in page with a flash message at top of page confirming successful log out|✓|
 
 |Create Entry Page Testing|Yes/No|
 |---|:---:|
-| | |
+|Fonts and styles are loaded|✓|
+|Icons are loaded|✓|
+|`Review Title` input does not accept under 5 characters|✓|
+|`Review Title` input does not accept over 50 characters|✓|
+|`Book Title` input does not accept under 3 characters|✓|
+|`Book Title` input does not accept over 100 characters|✓|
+|`Author Name` input does not accept under 3 characters|✓|
+|`Author Name` input does not accept over 50 characters|✓|
+|`Book Genre` dropdown list is loaded|✓|
+|`Book Genre` input displays genre once selected|✓|
+|`Review` input does not accept under 5 characters|✓|
+|`Review` input does not accept over 1000 characters|✓|
+|`Publish Date` prompts a calender selection|✓|
+
 
 ## User Story
 1. I want to register for an account.
@@ -111,8 +177,10 @@ Automated tests are repeatable and reliable as there is limited risk for human e
  ![quiz.js console](link)
 
 ## Known bugs and fixes 
-- **Issue** with connecting MongoDB
-  - **Solution** adding in DB name to connection URL in env.py
+- **Issue**: connecting MongoDB
+  - **Solution**: adding in DB name to connection URL in env.py
+-**Issue**: white text not showing on date picker
+  -**Solution**: changed background colour of datepicker
 
 ## Testing Credits
 - [JShint](https://jshint.com/)

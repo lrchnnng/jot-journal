@@ -101,8 +101,36 @@ footer {
         font-size: 16px;
     }
 
+    /* Dropdown Option*/
     .select-dropdown {
+        color: #fafafa;
+    }
+
+    /*Date Picker*/
+    .datepicker-date-display {
+        background-color: #E57373;
+    }
+
+    .datepicker-calendar-container {
+        background-color: #FF5252;
         color: white;
+    }
+
+    .datepicker-date-display {
+        color: #fafafa;
+    }
+
+    .datepicker-table td.is-selected {
+        background-color: #FFCDD2;
+        color: #424242;
+    }
+
+    .datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+        color: #fff;
+    }
+
+    .datepicker-clear {
+        color: #000;
     }
 
     /* Index Styling */
