@@ -21,8 +21,6 @@
   <a href="{{ url_for('index', sort_option='author_name') }}" class="sort-btn btn-small red lighten-2 grey-text text-lighten-4 {% if selected_sort_option == 'author_name' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by author</a>
 </div>
 
-</div>
-
 <!-- generates a card for each entry -->
 <div class="entry-container center">
   {% for entry in entries %}

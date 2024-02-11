@@ -212,10 +212,12 @@ Automated tests are repeatable and reliable as there is limited risk for human e
 ### HTML and CSS Validation <!-- omit in toc -->
 ### HTML <!-- omit in toc -->
 ![HTML Validation](link)
-|Page|Errors|Fixes|
-|:---:|---|---|
-|Index|Parse Error|The validator does not recognise the curly brackets used in the Jinja statements so error was ignored|
-||||
+|Page|Errors|Explanation|Fixes|
+|:---:|---|---|---|
+|Base|Bad Value|The validator does not recognise the curly brackets used in the Jinja statements. Ignoring all of the errors that include the use of curly brackets there are no other issues.|Errors ignored|
+|Index|Parse Error|The validator does not recognise the curly brackets used in the Jinja statements. Ignoring all of the errors that include the use of curly brackets there are no other issues.|Error ignored|
+|Index|Stray end tag `div`|An extra unused div tag found on line 24|Removed the stray div tag|
+|||||
 
 
 ### CSS <!-- omit in toc -->
