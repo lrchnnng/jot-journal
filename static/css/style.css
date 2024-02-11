@@ -113,7 +113,6 @@ footer {
 
     .dropdown-content li>a, .dropdown-content li>span {
         color: #FF5252;
-        background-color: #b8b8b8;
     }
 
     /*Date Picker*/
@@ -141,6 +140,24 @@ footer {
 
     .datepicker-clear {
         color: #000;
+    }
+
+    .datepicker-table abbr {
+        text-decoration: none;
+        color: #000;
+    }
+
+    /* Lever select */
+    .switch label .lever:before {
+        background-color: #e57373;
+    }
+
+    .switch label input[type=checkbox]:checked+.lever {
+        background-color: #E57373;
+    }
+
+    .switch label input[type=checkbox]:checked+.lever:after {
+        background-color: #FF5252;
     }
 
     /* Index Styling */
