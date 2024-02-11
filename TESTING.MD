@@ -212,9 +212,12 @@ Automated tests are repeatable and reliable as there is limited risk for human e
 ### HTML and CSS Validation <!-- omit in toc -->
 ### HTML <!-- omit in toc -->
 ![HTML Validation](link)
-- All of the HTML pages passed 
-![HTML Validation](link)
-- Explain any errors. 
+|Page|Errors|Fixes|
+|:---:|---|---|
+|Index|Parse Error|The validator does not recognise the curly brackets used in the Jinja statements so error was ignored|
+||||
+
+
 ### CSS <!-- omit in toc -->
 ![CSS Validation](link)
 - All pages passed.
