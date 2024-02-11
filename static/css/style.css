@@ -147,6 +147,10 @@ footer {
         color: #000;
     }
 
+    .datepicker-table td.is-today {
+        color: black;
+    }
+
     /* Lever select */
     .switch label .lever:before {
         background-color: #e57373;
