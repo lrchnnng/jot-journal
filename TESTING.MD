@@ -122,7 +122,56 @@ Manual testing allows the tester to explore the site and using experience and cr
 |`Book Genre` input displays genre once selected|✓|
 |`Review` input does not accept under 5 characters|✓|
 |`Review` input does not accept over 1000 characters|✓|
-|`Publish Date` prompts a calender selection|✓|
+|`Publish Date` prompts a calendar selection|✓|
+|`Publish Date` calendar text is all visible and easily readable|✓|
+|`Publish Date` month dropdown selection functions correctly|✓|
+|`Publish Date` year dropdown selection functions correctly|✓|
+|`Publish Date` input displays selected date on form|✓|
+|`Publisher Name` input does not accept under 3 characters|✓|
+|`Publisher Name` input does not accept over 50 characters|✓|
+|`Recommend Select Lever` functions correctly|✓|
+|`Review Date` prompts a calendar selection|✓|
+|`Review Date` calendar text is all visible and easily readable|✓|
+|`Review Date` input displays selected date on form|✓|
+|`Review Date` month dropdown selection functions correctly|✓|
+|`Review Date` year dropdown selection functions correctly|✓|
+|`Save Entry` button saves form content to MongoDB|✓|
+|`Save Entry` button redirects user to index page|✓|
+|Flash message appears at top of index page confirming successful creation of entry|✓|
+
+
+|Edit Entry Page Testing|Yes/No|
+|---|:---:|
+|Fonts and styles are loaded|✓|
+|Icons are loaded|✓|
+|Previous input values are added to the form for user to change at will|✓|
+|`Review Title` input does not accept under 5 characters|✓|
+|`Review Title` input does not accept over 50 characters|✓|
+|`Book Title` input does not accept under 3 characters|✓|
+|`Book Title` input does not accept over 100 characters|✓|
+|`Author Name` input does not accept under 3 characters|✓|
+|`Author Name` input does not accept over 50 characters|✓|
+|`Book Genre` dropdown list is loaded|✓|
+|`Book Genre` input displays genre once selected|✓|
+|`Review` input does not accept under 5 characters|✓|
+|`Review` input does not accept over 1000 characters|✓|
+|`Publish Date` prompts a calendar selection|✓|
+|`Publish Date` calendar text is all visible and easily readable|✓|
+|`Publish Date` month dropdown selection functions correctly|✓|
+|`Publish Date` year dropdown selection functions correctly|✓|
+|`Publish Date` input displays selected date on form|✓|
+|`Publisher Name` input does not accept under 3 characters|✓|
+|`Publisher Name` input does not accept over 50 characters|✓|
+|`Recommend Select Lever` functions correctly|✓|
+|`Review Date` prompts a calendar selection|✓|
+|`Review Date` calendar text is all visible and easily readable|✓|
+|`Review Date` input displays selected date on form|✓|
+|`Review Date` month dropdown selection functions correctly|✓|
+|`Review Date` year dropdown selection functions correctly|✓|
+|`Cancel` button redirects user back to index without saving changes|✓|
+|`Edit Entry` button saves form content to MongoDB, rewriting previous entry|✓|
+|`Save Entry` button redirects user to index page|✓|
+|Flash message appears at top of index page confirming successful edit of entry|✓|
 
 
 ## User Story
