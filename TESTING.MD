@@ -214,10 +214,12 @@ Automated tests are repeatable and reliable as there is limited risk for human e
 ![HTML Validation](link)
 |Page|Errors|Explanation|Fixes|
 |:---:|---|---|---|
-|Base|Bad Value|The validator does not recognise the curly brackets used in the Jinja statements. Ignoring all of the errors that include the use of curly brackets there are no other issues.|Errors ignored|
-|Index|Parse Error|The validator does not recognise the curly brackets used in the Jinja statements. Ignoring all of the errors that include the use of curly brackets there are no other issues.|Error ignored|
+|All pages but Base|Warning for missing `lang` attribute|A suggestion of the addition of `lang` attribute to declare the language of the document. Since I am using Jinja templating to extend the base template which includes this attribute this does not need to be included in the other pages|Warning Ignored|
+|All pages|Bad Value, Parse Error & Text not allowed Error|The validator does not recognise the curly brackets used in the Jinja statements. Ignoring all of the errors that include the use of curly brackets there are no other issues.|Errors ignored|
 |Index|Stray end tag `div`|An extra unused div tag found on line 24|Removed the stray div tag|
-|||||
+|Create Entry|Attribute `type` not allowed on element **textarea**|Using `type="textarea"` is not allowed on a textarea element|Type attribute removed|
+|Edit Entry|Attribute `type` not allowed on element **textarea**|Using `type="textarea"` is not allowed on a textarea element|Type attribute removed|
+|Log In|Unclosed element `div`|An unclosed div element found on line 35|Added missing closing `div` element|
 
 
 ### CSS <!-- omit in toc -->
