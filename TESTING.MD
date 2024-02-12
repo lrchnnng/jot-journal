@@ -211,7 +211,7 @@ Automated tests are repeatable and reliable as there is limited risk for human e
 
 ### HTML and CSS Validation <!-- omit in toc -->
 ### HTML <!-- omit in toc -->
-![HTML Validation](link)
+[HTML Validation](https://validator.w3.org/nu/#textarea)
 |Page|Errors|Explanation|Fixes|
 |:---:|---|---|---|
 |All pages but Base|Warning for missing `lang` attribute|A suggestion of the addition of `lang` attribute to declare the language of the document. Since I am using Jinja templating to extend the base template which includes this attribute this does not need to be included in the other pages|Warning Ignored|
@@ -221,10 +221,11 @@ Automated tests are repeatable and reliable as there is limited risk for human e
 |Edit Entry|Attribute `type` not allowed on element **textarea**|Using `type="textarea"` is not allowed on a textarea element|Type attribute removed|
 |Log In|Unclosed element `div`|An unclosed div element found on line 35|Added missing closing `div` element|
 
-
 ### CSS <!-- omit in toc -->
-![CSS Validation](link)
-- All pages passed.
+[CSS Validation](https://validator.w3.org/nu/#textarea)
+
+All pages passed CSS validation
+![CSS validation](static/images/testing-img/css-validation.png)
     
 ## JavaScript Testing <!-- omit in toc -->
 * I also ran both JS files through JSHint to make sure it was thoroughly tested.
