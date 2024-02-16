@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container s12 center">
+<div class="container l10 offset-l1 center">
   <div>
     <h1 class="grey-text text-lighten-4">Welcome to Jot!</h1>
     <h2 class="grey-text">A collaborative book review app</h2>
   </div>
-  <div class="center home-buttons"></div>
+  <div class="home-buttons"></div>
   {% if session.user %}
   <a href="{{ 'create_entry' }}" type="button" class="white-text btn-large red lighten-1">Create Entry</a>
   <br>
@@ -15,10 +15,11 @@
   <a href="{{ 'login' }}" type="button" class="white-text btn-large red lighten-1">Log In</a>
 </div>
 {% endif %}
-<div class="row sort-buttons center">
+<div class="row center">
   <a href="{{ url_for('index', sort_option='review_date') }}" class="sort-btn btn-small red lighten-3 grey-text text-darken-4 {% if selected_sort_option == 'review_date' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by most recent</a>
   <a href="{{ url_for('index', sort_option='book_title') }}" class="sort-btn btn-small red lighten-3 grey-text text-darken-4 {% if selected_sort_option == 'book_title' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by book title</a>
   <a href="{{ url_for('index', sort_option='author_name') }}" class="sort-btn btn-small red lighten-3 grey-text text-darken-4 {% if selected_sort_option == 'author_name' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by author</a>
+</div>
 </div>
 
 <!-- generates a card for each entry -->

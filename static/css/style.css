@@ -7,6 +7,7 @@ body {
 h1 {
     font-family: 'Fredericka the Great', sans-serif;
     font-size: clamp(2.375rem, -0.5227rem + 14.4886vw, 8.75rem);
+    margin: 0;
 }
 
 h2 {
@@ -22,6 +23,12 @@ h3 {
 p {
     font-size: clamp(1rem, 0.8864rem + 0.5682vw, 1.25rem);
 }
+
+/* Index Styling */
+    .sort-btn {
+        font-size: clamp(0.625rem, 0.4545rem + 0.8523vw, 1rem);
+        margin: 5px;
+    }
 
 /* Form Styling */
 input {
@@ -163,25 +170,22 @@ footer {
 /* Mobile */
 @media screen and (min-width:260px) {
     /* Index Styling */
+    .container {
+        margin: 0 auto;
+
+    }
+
+    /* Review Card Styling*/
     .entry-container {
         display: flex;
         flex-direction: column;
-        margin: 20px;
     }
 
     .card-panel {
         box-shadow: 0px 0px 20px #fafafa2b;
+        margin: 20px;
     }
 
-    .sort-buttons {
-        margin: 10px 40px;
-    }
-
-    .sort-btn {
-        margin: 10px;
-    }
-
-    /* Review Card Styling*/
     .bold {
         font-weight: bold;
     }
@@ -226,11 +230,12 @@ footer {
     .entry-container {
         display: grid;
         grid-template-columns: 50% 50%;
+        padding: 0 20px;
     }
 
     .card-panel {
-        margin: 5px;
-        padding-top: 60px;
+        margin: 20px;
+        padding: 60px 20px;
     }
 
     /* Button Styling */
@@ -245,7 +250,7 @@ footer {
     /* Index Styling */
     .entry-container {
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 25% 25% 25% 25%;
     }
 
     .card-panel {
