@@ -26,15 +26,15 @@
   {% for entry in entries %}
   <div class="card-panel grey darken-3 grey-text left-align">
     <div class="center">
-      <p class="center red-text text-lighten-3 book-title">{{ entry.book_title }}
+      <p class="center white-text book-title">{{ entry.book_title }}
         <br>
-        <span class="center red-text text-lighten-2 author">{{ entry.author_name }}</span>
+        <span class="center white-text author bold">{{ entry.author_name }}</span>
       </p>
     </div>
     <p class="white-text entry-title bold">{{ entry.entry_title }}</p>
     <p>Genre
       <br>
-      <span class="red-text text-lighten-3 genre">{{ entry.genre }}</span>
+      <span class="white-text genre">{{ entry.genre }}</span>
     </p>
     <p>Review
       <br>
@@ -42,18 +42,18 @@
     </p>
     <p>Publish Date
       <br>
-      <span class="red-text text-lighten-3 book-info">{{ entry.publish_date }}</span>
+      <span class="white-text book-info">{{ entry.publish_date }}</span>
     </p>
     <p>Publisher
       <br>
-      <span class="red-text text-lighten-3 book-info">{{ entry.publisher }}</span>
+      <span class="white-text book-info">{{ entry.publisher }}</span>
     </p>
     <p class="recommended">Recommends
       <br>
       {% if entry.recommended == "on" %}
-      <i class="fa-solid fa-check teal-text text-lighten-3 bold"></i>
+      <i class="fa-solid fa-check white-text bold"></i>
       {% else %}
-      <i class="fa-solid fa-xmark red-text text-lighten-2 bold"></i>
+      <i class="fa-solid fa-xmark white-text bold"></i>
       {% endif %}
     </p>
     <p class="user-info right">{{ entry.review_by }} - {{ entry.review_date }}
@@ -65,7 +65,7 @@
       <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="btn-small red lighten-4"><i
           class="fa-solid fa-pencil grey-text text-darken-4"></i></a>
       <a href="{{ url_for('delete_entry', entry_id=entry._id) }}" class="btn-small red lighten-2"><i
-          class="fas fa-trash-alt grey-text text-darken-3"></i></a>
+          class="fas fa-trash-alt grey-text text-darken-4"></i></a>
     </div>
     {% else %}
     {% endif%}
