@@ -21,7 +21,7 @@ h3 {
 }
 
 p {
-    font-size: clamp(1rem, 0.8864rem + 0.5682vw, 1.25rem);
+    font-size: 14px;
 }
 
 .arrow {
@@ -269,6 +269,7 @@ footer {
     .entry-container {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
+        padding: 0 60px;
     }
 
     .card-panel {
