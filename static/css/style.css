@@ -13,8 +13,24 @@ h2 {
     font-size: clamp(1.5rem, 1.0455rem + 2.2727vw, 2.5rem);
 }
 
+h3 {
+    font-family: 'Fredericka the Great', sans-serif;
+    font-size: clamp(2.25rem, 1.6818rem + 2.8409vw, 3.5rem);
+    margin-top: 2.5rem;
+}
+
+p {
+    font-size: clamp(1rem, 0.8864rem + 0.5682vw, 1.25rem);
+}
+
+/* Form Styling */
+input {
+    font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);    
+}
+
 /* Flashes styling*/
 .flashes {
+    font-size: 20px;
     line-height: 40px;
     width: 80%;
 }
@@ -37,10 +53,6 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-}
-
-.footer-logo {
-    font-family: "Fredericka the Great", sans-serif;
 }
 
 .links {
@@ -84,22 +96,6 @@ footer {
     border-radius: 40px;
     margin-right: 10px;
 }
-
-
-/* Mobile */
-@media screen and (min-width:260px) {
-    h3 {
-        font-family: 'Fredericka the Great', sans-serif;
-        font-size: 36px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    input {
-        font-size: 16px;
-    }
 
     /* Dropdown Genre Option*/
     .select-dropdown {
@@ -164,6 +160,8 @@ footer {
         background-color: #FF5252;
     }
 
+/* Mobile */
+@media screen and (min-width:260px) {
     /* Index Styling */
     .entry-container {
         display: flex;
@@ -189,68 +187,41 @@ footer {
     }
 
     .book-title {
-        font-size: 22px;
+        font-size: clamp(1.375rem, 1.2045rem + 0.8523vw, 1.75rem);
     }
 
     .author {
-        font-size: 20px;
+        font-size: clamp(1.25rem, 1.0795rem + 0.8523vw, 1.625rem);
     }
 
     .entry-title {
-        font-size: 18px;
+        font-size: clamp(1.125rem, 0.9545rem + 0.8523vw, 1.5rem);    
     }
 
     .genre {
-        font-size: 16px;
+        font-size: clamp(1rem, 0.8295rem + 0.8523vw, 1.375rem);
     }
 
     .review {
-        font-size: 16px;
+        font-size: clamp(1rem, 0.8295rem + 0.8523vw, 1.375rem);    
     }
 
     .book-info {
-        font-size: 14px;
+        font-size: clamp(0.875rem, 0.7614rem + 0.5682vw, 1.125rem);    
     }
 
     .user-info {
-        font-size: 12px;
+        font-size: clamp(0.75rem, 0.6364rem + 0.5682vw, 1rem);    
     }
 
     .recommended i {
-        font-size: 20px;
-        margin: 5px 20px;
-    }
-
-    /* Profile Styling */
-    .profile-buttons {
-
+        font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
+        margin-left: 2.5rem;
     }
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-    h3 {
-        font-size: 48px;
-        margin: 40px 0;
-    }
-
-    h5 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    input {
-        font-size: 18px;
-    }
-
-    /* Flashes styling*/
-    .flashes {
-        font-size: 20px;
-    }
-
     /* Index Styling */
     .entry-container {
         display: grid;
@@ -262,40 +233,6 @@ footer {
         padding-top: 60px;
     }
 
-    /* Review Card Styling*/
-    .book-title {
-        font-size: 24px;
-    }
-
-    .author {
-        font-size: 22px;
-    }
-
-    .entry-title {
-        font-size: 20px;
-    }
-
-    .genre {
-        font-size: 18px;
-    }
-
-    .review {
-        font-size: 18px;
-    }
-
-    .book-info {
-        font-size: 16px;
-    }
-
-    .user-info {
-        font-size: 14px;
-    }
-
-    .recommended i {
-        font-size: 22px;
-        margin: 5px 24px;
-    }
-
     /* Button Styling */
     .btn-large {
         font-size: 22px;
@@ -305,15 +242,6 @@ footer {
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
-    h3 {
-        font-size: 56px;
-        margin: 60px 0;
-    }
-
-    p {
-        font-size: 20px;
-    }
-
     /* Index Styling */
     .entry-container {
         display: grid;
@@ -322,40 +250,6 @@ footer {
 
     .card-panel {
         margin: 10px;
-    }
-
-    /* Review Card Styling*/
-    .book-title {
-        font-size: 28px;
-    }
-
-    .author {
-        font-size: 26px;
-    }
-
-    .entry-title {
-        font-size: 24px;
-    }
-
-    .genre {
-        font-size: 20px;
-    }
-
-    .review {
-        font-size: 22px;
-    }
-
-    .book-info {
-        font-size: 18px;
-    }
-
-    .user-info {
-        font-size: 16px;
-    }
-
-    .recommended i {
-        font-size: 24px;
-        margin: 5px 30px;
     }
 
     /* Button Styling */
