@@ -203,11 +203,6 @@ Manual testing allows the tester to explore the site and using experience and cr
 
 Automated tests are repeatable and reliable as there is limited risk for human error. It allows for testing on both a small and a large scale in a quick and efficient manner. Automated testing might be used to test the performance of a site in order to ensure that it can handle page loading.
 
- ### Lighthouse <!-- omit in toc -->
-
-| Page | Test Results | Lighthouse Suggested Improvements |
-|:---:|---|---|
-|Page|![description](link)|Description|
 
 ### HTML and CSS Validation <!-- omit in toc -->
 ### HTML <!-- omit in toc -->
@@ -226,7 +221,18 @@ Automated tests are repeatable and reliable as there is limited risk for human e
 
 All pages passed CSS validation
 ![CSS validation](static/images/testing-img/css-validation.png)
-    
+
+### Lighthouse <!-- omit in toc -->
+
+| Page | Test Results | Lighthouse Suggested Improvements |
+|:---:|---|---|
+|Index|![description](link)|Description|
+|Register|||
+|Log In||||
+|Profile|||
+|Create Entry|||
+|Edit Entry|||
+   
 ## JavaScript Testing <!-- omit in toc -->
 * I also ran both JS files through JSHint to make sure it was thoroughly tested.
  ![JSHint Testing](link)

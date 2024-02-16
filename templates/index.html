@@ -8,7 +8,7 @@
   </div>
   <div class="center home-buttons"></div>
   {% if session.user %}
-  <a href="{{ 'create_entry' }}" type="button" class="white-text btn-large red accent-2">Create Entry</a>
+  <a href="{{ 'create_entry' }}" type="button" class="white-text btn-large red lighten-1">Create Entry</a>
   <br>
   {% else %}
   <a href="{{ 'register' }}" type="button" class="white-text btn-large red darken-2">Register</a>
@@ -16,9 +16,9 @@
 </div>
 {% endif %}
 <div class="row sort-buttons center">
-  <a href="{{ url_for('index', sort_option='review_date') }}" class="sort-btn btn-small red lighten-2 grey-text text-lighten-4 {% if selected_sort_option == 'review_date' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by most recent</a>
-  <a href="{{ url_for('index', sort_option='book_title') }}" class="sort-btn btn-small red lighten-2 grey-text text-lighten-4 {% if selected_sort_option == 'book_title' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by book title</a>
-  <a href="{{ url_for('index', sort_option='author_name') }}" class="sort-btn btn-small red lighten-2 grey-text text-lighten-4 {% if selected_sort_option == 'author_name' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by author</a>
+  <a href="{{ url_for('index', sort_option='review_date') }}" class="sort-btn btn-small red lighten-3 grey-text text-darken-4 {% if selected_sort_option == 'review_date' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by most recent</a>
+  <a href="{{ url_for('index', sort_option='book_title') }}" class="sort-btn btn-small red lighten-3 grey-text text-darken-4 {% if selected_sort_option == 'book_title' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by book title</a>
+  <a href="{{ url_for('index', sort_option='author_name') }}" class="sort-btn btn-small red lighten-3 grey-text text-darken-4 {% if selected_sort_option == 'author_name' %}disabled{% endif %}" onclick="toggleButton(this)">Sort by author</a>
 </div>
 
 <!-- generates a card for each entry -->
@@ -28,7 +28,7 @@
     <div class="center">
       <p class="center red-text text-lighten-3 book-title">{{ entry.book_title }}
         <br>
-        <span class="center red-text text-lighten-1 author">{{ entry.author_name }}</span>
+        <span class="center red-text text-lighten-2 author">{{ entry.author_name }}</span>
       </p>
     </div>
     <p class="white-text entry-title bold">{{ entry.entry_title }}</p>
