@@ -233,7 +233,8 @@ All pages passed CSS validation
 |Final test|![Final test index](/static/images/testing-img/lighthouse-index-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying|Future goals: Create a custom 'disabled button' class style with higher contrast.|100%|100%|
 
 
-|Register|||
+|Register Page|Result|Performance|Accessibility|Best Practices|SEO|
+|:---:|---|---|---|---|---|
 |Log In||||
 |Profile|||
 |Create Entry|||
