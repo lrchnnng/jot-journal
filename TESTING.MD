@@ -228,7 +228,8 @@ All pages passed CSS validation
 
 |Index Page|Result|Performance|Accessibility|Best Practices|SEO|
 |:---:|---|---|---|---|---|
-|First Test|![First test index](/static/images/testing-img/lighthouse-first-index.png)||H2 and P elements do not have enough contrast between the text colour and background, I have adjusted the font colour to increase this contrast|100%||
+|First Test|![First test index](/static/images/testing-img/lighthouse-index-1.png)|Lighthouse suggests eliminating render-blocking resources by minifying CSS/JS or defering JS, I have added the defer attribute to the script links in the base template to see if it will affect loading time.|H2 and P elements do not have enough contrast between the text colour and background, I have adjusted the font colour to increase this contrast. I also added aria labels to all links to assist screen readers.|100%|'Document does not have a meta description', I have added a brief description of the web app.|
+|Second Test|![Second test index](/static/images/testing-img/lighthouse-index-2.png)|||100%|Tap target for mobile devices is 70% of appropriate size, I have increased the size of clickable links in the footer for mobiles only|
 
 
 |Register|||
