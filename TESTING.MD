@@ -226,9 +226,9 @@ All pages passed CSS validation
 
 | Page | Test Results | Lighthouse Suggested Improvements |
 
-|Index Page|Result|Description|
-|:---:|---|---|
-|First Test|![First test index](/static/images/testing-img/lighthouse-first-index.png)|Description|
+|Index Page|Result|Performance|Accessibility|Best Practices|SEO|
+|:---:|---|---|---|---|---|
+|First Test|![First test index](/static/images/testing-img/lighthouse-first-index.png)||H2 and P elements do not have enough contrast between the text colour and background, I have adjusted the font colour to increase this contrast|100%||
 
 
 |Register|||
