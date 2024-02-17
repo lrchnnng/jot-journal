@@ -23,13 +23,13 @@
 <div class="sort-buttons">
   <div class="center">
     <a href="{{ url_for('index', sort_option='review_date') }}"
-      class="sort-btn btn-small red lighten-4 grey-text text-darken-4 bold {% if selected_sort_option == 'review_date' %}disabled{% endif %}"
+      class="sort-btn btn-small red lighten-4 grey-text text-darken-4 {% if selected_sort_option == 'review_date' %}disabled{% endif %}"
       onclick="toggleButton(this)">Sort by most recent</a>
     <a href="{{ url_for('index', sort_option='book_title') }}"
-      class="sort-btn btn-small red lighten-4 grey-text text-darken-4 bold {% if selected_sort_option == 'book_title' %}disabled{% endif %}"
+      class="sort-btn btn-small red lighten-4 grey-text text-darken-4 {% if selected_sort_option == 'book_title' %}disabled{% endif %}"
       onclick="toggleButton(this)">Sort by book title</a>
     <a href="{{ url_for('index', sort_option='author_name') }}"
-      class="sort-btn btn-small red lighten-4 grey-text text-darken-4 bold{% if selected_sort_option == 'author_name' %}disabled{% endif %}"
+      class="sort-btn btn-small red lighten-4 grey-text text-darken-4 {% if selected_sort_option == 'author_name' %}disabled{% endif %}"
       onclick="toggleButton(this)">Sort by author</a>
   </div>
 </div>
