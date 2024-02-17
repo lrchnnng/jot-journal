@@ -24,6 +24,9 @@ p {
     font-size: 12px;
 }
 
+.input-field>label {
+    color: #c6c5c5;
+
 .arrow {
     margin: 20px 0;
     font-size: 20px;
