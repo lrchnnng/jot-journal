@@ -236,6 +236,7 @@ All pages passed CSS validation
 |Register Page|Result|Performance|Accessibility|Best Practices|SEO|
 |:---:|---|---|---|---|---|
 |First test|![First test register](/static/images/testing-img/lighthouse-register-1.png)|As with the index page, materializeCSS is causing the load time to be significantly lower. In the future I would look to fix this issue|Issues with colour contrasting, I have changed the font colour in order to increase this contrast|100%|100%|
+|Second test
 
 |Log In||||
 |Profile|||
