@@ -225,8 +225,12 @@ All pages passed CSS validation
 ### Lighthouse <!-- omit in toc -->
 
 | Page | Test Results | Lighthouse Suggested Improvements |
+
+|Index Page|Result|Description|
 |:---:|---|---|
-|Index|![description](link)|Description|
+|First Test|![First test index](/static/images/testing-img/lighthouse-first-index.png)|Description|
+
+
 |Register|||
 |Log In||||
 |Profile|||
