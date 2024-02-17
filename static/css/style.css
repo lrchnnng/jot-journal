@@ -71,22 +71,13 @@ footer {
     font-size: 16px;
 }
 
-/* Review Card Styling*/
-.entry-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-panel {
-    box-shadow: 0px 0px 20px #fafafa2b;
-    margin: 20px;
-}
+/* Card Panel Styling*/
 
 .bold {
     font-weight: bold;
 }
 
-.book-title, 
+.book-title,
 .author {
     font-size: 18px;
 }
@@ -95,12 +86,13 @@ footer {
     font-size: 16px;
 }
 
-.genre, 
+.genre,
 .review,
 .book-info,
 .recommended i {
     font-size: 14px;
 }
+
 .user-info {
     font-size: 12px;
 }
@@ -230,7 +222,16 @@ footer {
         margin: 80px 0 20px 0;
     }
 
-    
+    /* Review Card Styling*/
+    .entry-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-panel {
+        box-shadow: 0px 0px 20px #fafafa2b;
+        margin: 0 20px;
+    }
 }
 
 /* Tablet */
@@ -245,7 +246,7 @@ footer {
 
     .card-panel {
         margin: 20px;
-        padding: 60px 20px;
+        padding: 20px;
     }
 
     /* Button Styling */
@@ -261,7 +262,7 @@ footer {
     /* Index Styling */
     .entry-container {
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
         padding: 0 60px;
     }
 
