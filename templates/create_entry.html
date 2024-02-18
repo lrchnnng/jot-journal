@@ -41,7 +41,8 @@
         <div class="row">
             <div class="input-field col s12 l10 offset-l1">
                 <i class="fas fa-folder-open prefix"></i>
-                <select id="genre_name" name="genre_name" class="validate white-text" required>
+                <select id="genre_name" name="genre_name" class="validate white-text" 
+                    aria-label="A dropdown menu with a list of book genres" required>
                     <option value="" disabled selected>Choose Genre</option>
                     {% for genre in genres %}
                     <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
