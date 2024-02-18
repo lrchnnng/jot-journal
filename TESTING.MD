@@ -232,13 +232,16 @@ All pages passed CSS validation
 |Second Test|![Second test index](/static/images/testing-img/lighthouse-index-2.png)|Adding a defer attribute to script elements did not increase load time. It appears that materializeCSS is causing the loading time to slow down due to unused CSS, this is something I would attempt to address in the future.|One of the sort buttons is lowing the accessiblity score due to low contrast in the disabled styling. I want the button to be visually unclickable so I have chosen to ignore this issue. I have also added an aria label to the hamburger menu.|100%|Tap target for mobile devices is 70% of appropriate size, I have increased the size of clickable links in the footer for mobiles only|
 |Final test|![Final test index](/static/images/testing-img/lighthouse-index-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|Future goals: Create a custom 'disabled button' class style with higher contrast.|100%|100%|
 
-
 |Register Page|Result|Performance|Accessibility|Best Practices|SEO|
 |:---:|---|---|---|---|---|
 |First test|![First test register](/static/images/testing-img/lighthouse-register-1.png)|As with the index page, materializeCSS is causing the load time to be significantly lower. In the future I would look to fix this issue|Issues with colour contrasting, I have changed the font colour in order to increase this contrast|100%|100%|
 |Final test|![Final test register](/static/images/testing-img/lighthouse-register-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|100%|100%|100%|
 
-|Log In||||
+|Log In Page|Result|Performance|Accessibility|Best Practices|SEO|
+|:---:|---|---|---|---|---|
+|First test|![First test register](/static/images/testing-img/lighthouse-login-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|100%|100%|100%|
+
+
 |Profile|||
 |Create Entry|||
 |Edit Entry|||
