@@ -248,11 +248,11 @@ All pages passed CSS validation
 |Page|Result|Description|
 |---|---|---|
 |Index|![WAVE index](/static/images/testing-img/wave-index.png)|Known error: Disabled sort button contrast is too low and I would address this on a later iteration|
-|Register|![WAVE register](/static/images/testing-img/wave-register.png)||
-|Log In|![WAVE Log In](/static/images/testing-img/wave-login.png)||
-|Profile|![WAVE Profile](/static/images/testing-img/wave-profile.png)||
-|Create Entry|![WAVE Create Entry](/static/images/testing-img/wave-create.png)||
-|Edit Entry|![WAVE Edit Entry](/static/images/testing-img/wave-edit.png)||
+|Register|![WAVE register](/static/images/testing-img/wave-register.png)|Missing h1 element: I used a h3 element instead of a h1 element to make styling easier|
+|Log In|![WAVE Log In](/static/images/testing-img/wave-login.png)|Missing h1 element: I used a h3 element instead of a h1 element to make styling easier. WAVE is flagging the 'Register Here!' link as a redundant link as there is also a link in the nav bar on the same page.|
+|Profile|![WAVE Profile](/static/images/testing-img/wave-profile.png)|Missing h1 element: I used a h3 element instead of a h1 element to make styling easier.|
+|Create Entry|![WAVE Create Entry](/static/images/testing-img/wave-create.png)|Missing form label: known error that would be addressed in later iterations of the app. Missing h1 element: I used a h3 element instead of a h1 element to make styling easier.|
+|Edit Entry|![WAVE Edit Entry](/static/images/testing-img/wave-edit.png)|Missing form label: known error that would be addressed in later iterations of the app. Missing h1 element: I used a h3 element instead of a h1 element to make styling easier. WAVE is flagging the 'Jot' footer logo link as a redundant link as there is also a link in the nav bar on the same page.|
 
    
 ## JavaScript Testing <!-- omit in toc -->
