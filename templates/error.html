@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="container">
+    <div class="col-12">
+        <div class="row  center">
+            <h1 class="white-text">{{ error_number }} Error</h1>
+            <h2 class="grey-text text-lighten-1">{{ error_message}}</h2>
+        </div>
+    </div>
+    <div class="center grey-text text-lighten-4">
+        <h6>Use the navigation bar above to try again, or click below</h6>
+        <a href="{{ url_for('index') }}" class="btn-large center red lighten-3 grey-text text-darken-4">Click me to go Home!</a>
+    </div>
+
+</section>
+
+{% endblock %}

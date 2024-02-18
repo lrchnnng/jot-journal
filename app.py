@@ -16,6 +16,37 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+@app.errorhandler(400)
+def page_not_found(error):
+    error_message = "Sorry! It looks like this page was\
+        accessed incorrectly, or may have been corrupted."
+    return render_template('error.html', error_number = "400", 
+        error_message=error_message), 400
+
+
+@app.errorhandler(401)
+def page_not_found(error):
+    error_message = "Oops, it looks like you may not be authorised\
+        to view this page."
+    return render_template('error.html', error_number = "401", 
+        error_message=error_message), 401
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    error_message = "Oops, the page you're looking for couldn't\
+        be found! Check your URL has been entered correctly."
+    return render_template('error.html', error_number = "404", 
+        error_message=error_message), 404
+
+
+@app.errorhandler(500)
+def page_not_found(error):
+    error_message = "Sorry, there was a problem while fulfilling\
+        your request."
+    return render_template('error.html', error_number = "500", 
+        error_message=error_message), 500
+
 
 @app.route("/")
 @app.route("/index/<sort_option>")
