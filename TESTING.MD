@@ -227,30 +227,18 @@ All pages passed CSS validation
 | Page | Test Results | Lighthouse Suggested Improvements |
 |:---:|---|---|
 |Index - Test 1|![First test index](/static/images/testing-img/lighthouse-index-test1.png)|Edit and delete buttons have no discernable name, I have fixed this by adding aria labels to the buttons in order to assist screen readers|
-
-
-
-|Index Page|Result|Performance|Accessibility|Best Practices|SEO|
-|:---:|---|---|---|---|---|
-|First Test|![First test index](/static/images/testing-img/lighthouse-index-test1.png)|Lighthouse suggests eliminating render-blocking resources by minifying CSS/JS or defering JS, I have added the defer attribute to the script links in the base template to see if it will affect loading time.|H2 and P elements do not have enough contrast between the text colour and background, I have adjusted the font colour to increase this contrast. I also added aria labels to all links to assist screen readers.|100%|'Document does not have a meta description', I have added a brief description of the web app.|
-|Second Test|![Second test index](/static/images/testing-img/lighthouse-index-2.png)|Adding a defer attribute to script elements did not increase load time. It appears that materializeCSS is causing the loading time to slow down due to unused CSS, this is something I would attempt to address in the future.|One of the sort buttons is lowing the accessiblity score due to low contrast in the disabled styling. I want the button to be visually unclickable so I have chosen to ignore this issue. I have also added an aria label to the hamburger menu.|100%|Tap target for mobile devices is 70% of appropriate size, I have increased the size of clickable links in the footer for mobiles only|
-|Final test|![Final test index](/static/images/testing-img/lighthouse-index-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|Future goals: Create a custom 'disabled button' class style with higher contrast.|100%|100%|
-
-|Register Page|Result|Performance|Accessibility|Best Practices|SEO|
-|:---:|---|---|---|---|---|
-|First test|![First test register](/static/images/testing-img/lighthouse-register-1.png)|As with the index page, materializeCSS is causing the load time to be significantly lower. In the future I would look to fix this issue|Issues with colour contrasting, I have changed the font colour in order to increase this contrast|100%|100%|
-|Final test|![Final test register](/static/images/testing-img/lighthouse-register-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|100%|100%|100%|
-
-|Log In Page|Result|Performance|Accessibility|Best Practices|SEO|
-|:---:|---|---|---|---|---|
-|First test|![First test log in](/static/images/testing-img/lighthouse-login-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|100%|100%|100%|
-
-|Profile Page|Result|Performance|Accessibility|Best Practices|SEO|
-|:---:|---|---|---|---|---|
-|First test|![First test profile](/static/images/testing-img/lighthouse-profile.1.png)|Future goals: Reduce unused JavaScript|100%|100%|100%|
-
-|Create Entry|||
-|Edit Entry|||
+|Index - Test 2|![Second test index](/static/images/testing-img/lighthouse-index-test2.png)|Future goals: Create a custom 'disabled button' class style with higher contrast for the disabled sort button. Enable text compression and defer all non-critical JS and styles in order to stop resources from blocking the render.|
+|---|---|---|
+|Register - Test 1|![First test register](/static/images/testing-img/lighthouse-register-test1.png)|Future goals: Reduce unused JavaScript from MaterializeCSS|
+|---|---|---|
+|Log In - Test 1|![First test log in](/static/images/testing-img/lighthouse-login-test1.png)|Future goals: Reduce unused JavaScript from MaterializeCSS|
+|---|---|---|
+|Profile - Test 1|![First test profile](/static/images/testing-img/lighthouse-profile-test1.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render lowering the time it takes to load the page.|
+|---|---|---|
+|Create Entry - Test 1|![First test create entry](/static/images/testing-img/lighthouse-profile-test1.png)|Issues with contrast between background and foreground, I have changed the 'Choose Genre' dropdown font colour, and the font colour of the switch lever labels|
+|||
+|---|---|---|
+|Edit Entry|![First test edit entry](/static/images/testing-img/lighthouse-profile-test1.png)||
    
 ## JavaScript Testing <!-- omit in toc -->
 * I also ran both JS files through JSHint to make sure it was thoroughly tested.

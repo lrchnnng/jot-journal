@@ -24,8 +24,14 @@ p {
     font-size: 12px;
 }
 
+label {
+    color: #c6c5c5;
+    font-weight: bold;
+}
+
 .input-field>label {
     color: #c6c5c5;
+    font-weight: normal;
 }
 
 .direct {
@@ -153,7 +159,7 @@ footer {
 
 /* Dropdown Genre Option*/
 .select-dropdown {
-    color: #e57373;
+    color: #f7aaaa;
     font-weight: bold;
 }
 
@@ -201,7 +207,7 @@ footer {
 
 .datepicker-table abbr {
     text-decoration: none;
-    color: #ef9a9a;
+    color: #dddddd;
 }
 
 .datepicker-table td.is-today {
