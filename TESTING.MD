@@ -242,6 +242,18 @@ All pages passed CSS validation
 |---|---|---|
 |Edit Entry - Test 1|![First test edit entry](/static/images/testing-img/lighthouse-edit-test1.png)|Issues with contrast between button colour and font colour for the cancel button, I have fixed this by changing the font colour|
 |Edit Entry - Test 2|![First test edit entry](/static/images/testing-img/lighthouse-edit-test2.png)|Future goals: Reduce unused JavaScript and reduce initial server response time to increase performance. I would also find a way to add a label to the dropdown genre menu to improve accessability score.|
+
+## WAVE Accessibility Evaluation
+
+|Page|Result|Description|
+|---|---|---|
+|Index|![WAVE index](/static/images/testing-img/wave-index.png)|Known error: Disabled sort button contrast is too low and I would address this on a later iteration|
+|Register|![WAVE register](/static/images/testing-img/wave-register.png)||
+|Log In|![WAVE Log In](/static/images/testing-img/wave-login.png)||
+|Profile|![WAVE Profile](/static/images/testing-img/wave-profile.png)||
+|Create Entry|![WAVE Create Entry](/static/images/testing-img/wave-create.png)||
+|Edit Entry|![WAVE Edit Entry](/static/images/testing-img/wave-edit.png)||
+
    
 ## JavaScript Testing <!-- omit in toc -->
 [JSHint Testing](https://jshint.com/) - I ran the JS files through JSHint to make sure it was thoroughly tested, no issues were found.
