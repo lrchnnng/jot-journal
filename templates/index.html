@@ -73,10 +73,13 @@
     <!-- only allows signed in users to edit and delete posts-->
     {% if session.user %}
     <div class="crud-btn">
-      <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="btn-small red lighten-4"><i
-          class="fa-solid fa-pencil grey-text text-darken-4"></i></a>
-      <a href="{{ url_for('delete_entry', entry_id=entry._id) }}" class="btn-small red lighten-2"><i
-          class="fas fa-trash-alt grey-text text-darken-4"></i></a>
+      <a href="{{ url_for('edit_entry', entry_id=entry._id) }}" class="btn-small red lighten-4"
+        aria-label="A clickable button directing to the create entry page">
+        <i class="fa-solid fa-pencil grey-text text-darken-4"></i>
+      </a>
+      <a href="{{ url_for('delete_entry', entry_id=entry._id) }}" class="btn-small red lighten-2"
+        aria-label="A clickable button to delete the entry">
+        <i class="fas fa-trash-alt grey-text text-darken-4"></i></a>
     </div>
     {% else %}
     {% endif%}

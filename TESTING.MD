@@ -225,10 +225,14 @@ All pages passed CSS validation
 ### Lighthouse <!-- omit in toc -->
 
 | Page | Test Results | Lighthouse Suggested Improvements |
+|:---:|---|---|
+|Index - Test 1|![First test index](/static/images/testing-img/lighthouse-index-test1.png)|Edit and delete buttons have no discernable name, I have fixed this by adding aria labels to the buttons in order to assist screen readers|
+
+
 
 |Index Page|Result|Performance|Accessibility|Best Practices|SEO|
 |:---:|---|---|---|---|---|
-|First Test|![First test index](/static/images/testing-img/lighthouse-index-1.png)|Lighthouse suggests eliminating render-blocking resources by minifying CSS/JS or defering JS, I have added the defer attribute to the script links in the base template to see if it will affect loading time.|H2 and P elements do not have enough contrast between the text colour and background, I have adjusted the font colour to increase this contrast. I also added aria labels to all links to assist screen readers.|100%|'Document does not have a meta description', I have added a brief description of the web app.|
+|First Test|![First test index](/static/images/testing-img/lighthouse-index-test1.png)|Lighthouse suggests eliminating render-blocking resources by minifying CSS/JS or defering JS, I have added the defer attribute to the script links in the base template to see if it will affect loading time.|H2 and P elements do not have enough contrast between the text colour and background, I have adjusted the font colour to increase this contrast. I also added aria labels to all links to assist screen readers.|100%|'Document does not have a meta description', I have added a brief description of the web app.|
 |Second Test|![Second test index](/static/images/testing-img/lighthouse-index-2.png)|Adding a defer attribute to script elements did not increase load time. It appears that materializeCSS is causing the loading time to slow down due to unused CSS, this is something I would attempt to address in the future.|One of the sort buttons is lowing the accessiblity score due to low contrast in the disabled styling. I want the button to be visually unclickable so I have chosen to ignore this issue. I have also added an aria label to the hamburger menu.|100%|Tap target for mobile devices is 70% of appropriate size, I have increased the size of clickable links in the footer for mobiles only|
 |Final test|![Final test index](/static/images/testing-img/lighthouse-index-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|Future goals: Create a custom 'disabled button' class style with higher contrast.|100%|100%|
 
@@ -239,10 +243,12 @@ All pages passed CSS validation
 
 |Log In Page|Result|Performance|Accessibility|Best Practices|SEO|
 |:---:|---|---|---|---|---|
-|First test|![First test register](/static/images/testing-img/lighthouse-login-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|100%|100%|100%|
+|First test|![First test log in](/static/images/testing-img/lighthouse-login-final.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render and reduce unused CSS and JS by minifying.|100%|100%|100%|
 
+|Profile Page|Result|Performance|Accessibility|Best Practices|SEO|
+|:---:|---|---|---|---|---|
+|First test|![First test profile](/static/images/testing-img/lighthouse-profile.1.png)|Future goals: Reduce unused JavaScript|100%|100%|100%|
 
-|Profile|||
 |Create Entry|||
 |Edit Entry|||
    
