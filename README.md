@@ -151,7 +151,9 @@ I created a userflow diagram to show how the user will interact with each page o
 
 <details><summary>Click here for userflow</summary>
 
-![Userflow](link)
+![Register/Log In Userflow](link)
+
+![CRUD Userflow](link)
 
 </details>
 
@@ -289,7 +291,7 @@ It's also possible to log in, commit and deploy your app via the command line:
 
 [Font-size Clamp Generator](https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjMyMHB4IiwibWF4V2lkdGgiOiIxMDI0cHgiLCJtaW5Gb250U2l6ZSI6IjI0cHgiLCJtYXhGb250U2l6ZSI6IjYwcHgifQ%3D%3D) - Used to create responsive text sizes.
 
-[Google Fonts](https://fonts.google.com/) - Used to find fonts across the site.
+[Google Fonts](https://fonts.google.com/) - Used to find fonts for across the site.
 
 [Materialize CSS](https://materializecss.com/) - Used to create fully responsive navbar and a variety of other components.
 
