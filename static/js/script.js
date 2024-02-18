@@ -11,3 +11,6 @@ $(document).ready(function(){
     });
     $('select').formSelect();
   });
+
+  const year = document.querySelector('#current-year');
+  year.innerHTML = new Date().getFullYear();

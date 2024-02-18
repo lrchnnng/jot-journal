@@ -242,10 +242,8 @@ All pages passed CSS validation
 |Edit Entry - Test 2|![First test edit entry](/static/images/testing-img/lighthouse-edit-test2.png)|Future goals: Reduce unused JavaScript and reduce initial server response time to increase performance. I would also find a way to add a label to the dropdown genre menu to improve accessability score.|
    
 ## JavaScript Testing <!-- omit in toc -->
-* I also ran both JS files through JSHint to make sure it was thoroughly tested.
- ![JSHint Testing](link)
-* Throughout development I used console logs to test that the functions worked as intended.
- ![quiz.js console](link)
+[JSHint Testing](https://jshint.com/) - I ran the JS files through JSHint to make sure it was thoroughly tested, no issues were found.
+
 
 ## Known bugs and fixes 
 - **Issue**: connecting MongoDB
