@@ -1,10 +1,9 @@
 import os
-from flask import (
-    Flask, flash, render_template,
-    redirect, request, session, url_for)
+from flask import Flask, flash, render_template, redirect, request, session, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+
 if os.path.exists("env.py"):
     import env
 
@@ -33,13 +32,17 @@ def index(sort_option="review_date"):
         sort_field = "review_date"
         sort_order = -1
         flash("Sorting by most recent")
-        
+
     # Store the currently selected sort option
     selected_sort_option = sort_option
-    
+
     entries = mongo.db.entries.find().sort(sort_field, sort_order)
-    return render_template("index.html", entries=entries, 
-        sort_option=sort_option, selected_sort_option=selected_sort_option)
+    return render_template(
+        "index.html",
+        entries=entries,
+        sort_option=sort_option,
+        selected_sort_option=selected_sort_option,
+    )
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -47,7 +50,8 @@ def register():
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()}
+        )
 
         if existing_user:
             flash("Username already exists")
@@ -55,7 +59,7 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
         }
         mongo.db.users.insert_one(register)
 
@@ -63,7 +67,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
-    
+
     return render_template("register.html")
 
 
@@ -72,15 +76,16 @@ def login():
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()}
+        )
 
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+                existing_user["password"], request.form.get("password")
+            ):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -97,23 +102,22 @@ def login():
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    username = mongo.db.users.find_one({"username": session["user"]})["username"]
 
     if session["user"]:
         return render_template("profile.html", username=username)
-    
+
     return redirect(url_for("login"))
 
 
 @app.route("/logout")
 def logout():
-    #remove user from session cookie
+    # remove user from session cookie
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
- 
- 
+
+
 @app.route("/create_entry", methods=["GET", "POST"])
 def create_entry():
     if request.method == "POST":
@@ -129,10 +133,10 @@ def create_entry():
             "publisher": request.form.get("publisher"),
             "recommended": recommend,
             "review_by": session["user"],
-            }
+        }
         mongo.db.entries.insert_one(entry)
         flash("Entry Successfully Added")
-        return redirect(url_for('index'))
+        return redirect(url_for("index"))
 
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("create_entry.html", genres=genres)
@@ -157,11 +161,12 @@ def edit_entry(entry_id):
         entry_id_obj = ObjectId(entry_id)
         mongo.db.entries.update_one({"_id": entry_id_obj}, {"$set": submit})
         flash("Entry Successfully Edited")
-        return redirect(url_for('index'))
+        return redirect(url_for("index"))
 
     entry = mongo.db.entries.find_one({"_id": ObjectId(entry_id)})
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("edit_entry.html", entry=entry, genres=genres)
+
 
 @app.route("/delete_entry/<entry_id>")
 def delete_entry(entry_id):
@@ -172,6 +177,4 @@ def delete_entry(entry_id):
 
 
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)

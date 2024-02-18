@@ -135,9 +135,10 @@ Manual testing allows the tester to explore the site and using experience and cr
 |`Review Date` input displays selected date on form|✓|
 |`Review Date` month dropdown selection functions correctly|✓|
 |`Review Date` year dropdown selection functions correctly|✓|
-|`Save Entry` button saves form content to MongoDB|✓|
-|`Save Entry` button redirects user to index page|✓|
+|`Edit Entry` button saves form content to MongoDB|✓|
+|`Edit Entry` button redirects user to index page|✓|
 |Flash message appears at top of index page confirming successful creation of entry|✓|
+|`Edit Entry` does not redirect if any input field is empty|✓|
 
 
 |Edit Entry Page Testing|Yes/No|
@@ -172,6 +173,7 @@ Manual testing allows the tester to explore the site and using experience and cr
 |`Edit Entry` button saves form content to MongoDB, rewriting previous entry|✓|
 |`Save Entry` button redirects user to index page|✓|
 |Flash message appears at top of index page confirming successful edit of entry|✓|
+|`Save Entry` does not redirect if any input field is empty|✓|
 
 
 ## User Story
@@ -244,6 +246,8 @@ All pages passed CSS validation
 ## JavaScript Testing <!-- omit in toc -->
 [JSHint Testing](https://jshint.com/) - I ran the JS files through JSHint to make sure it was thoroughly tested, no issues were found.
 
+## Python Testing
+[Code Beautifier](https://codebeautify.org/python-formatter-beautifier#) - I ran my python code through this formatter to ensure that it met PEP8 guidlines.
 
 ## Known bugs and fixes 
 - **Issue**: connecting MongoDB
@@ -253,6 +257,8 @@ All pages passed CSS validation
 
 ## Testing Credits
 - [JShint](https://jshint.com/)
-  * Used for testing.
+  * Used for testing JavaScript.
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
-  * Used for testing.
+  * Used for testing performance, accessibility, best practices and SEO.
+- [Code Beautifier](https://codebeautify.org/python-formatter-beautifier#)
+  * Used to format Python code to PEP8 standards
