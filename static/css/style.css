@@ -26,6 +26,15 @@ p {
 
 .input-field>label {
     color: #c6c5c5;
+}
+
+.direct {
+    font-size: 16px;
+}
+
+.direct a {
+    text-decoration: underline;
+}
 
 .arrow {
     margin: 20px 0;
