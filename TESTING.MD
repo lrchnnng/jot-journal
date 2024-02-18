@@ -236,9 +236,10 @@ All pages passed CSS validation
 |Profile - Test 1|![First test profile](/static/images/testing-img/lighthouse-profile-test1.png)|Future goals: Defer all non-critical JS and styles in order to stop resources from blocking the render lowering the time it takes to load the page.|
 |---|---|---|
 |Create Entry - Test 1|![First test create entry](/static/images/testing-img/lighthouse-create-test1.png)|Issues with contrast between background and foreground, I have changed the 'Choose Genre' dropdown font colour, and the font colour of the switch lever labels|
-|Create Entry - Test 2|![Second test create entry](/static/images/testing-img/lighthouse-create-test2.png)|Future goals: Remove unused JavaScript and reduce initial server response time. I would also find a way to add a label to the dropdown genre menu to improve accessability score.|
+|Create Entry - Test 2|![Second test create entry](/static/images/testing-img/lighthouse-create-test2.png)|Future goals: Reduce unused JavaScript and reduce initial server response time to increase performance. I would also find a way to add a label to the dropdown genre menu to improve accessability score.|
 |---|---|---|
-|Edit Entry|![First test edit entry](/static/images/testing-img/lighthouse-profile-test1.png)||
+|Edit Entry - Test 1|![First test edit entry](/static/images/testing-img/lighthouse-edit-test1.png)|Issues with contrast between button colour and font colour for the cancel button, I have fixed this by changing the font colour|
+|Edit Entry - Test 2|![First test edit entry](/static/images/testing-img/lighthouse-edit-test2.png)|Future goals: Reduce unused JavaScript and reduce initial server response time to increase performance. I would also find a way to add a label to the dropdown genre menu to improve accessability score.|
    
 ## JavaScript Testing <!-- omit in toc -->
 * I also ran both JS files through JSHint to make sure it was thoroughly tested.
