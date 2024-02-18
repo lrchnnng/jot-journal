@@ -227,6 +227,11 @@ footer {
     background-color: #e57373;
 }
 
+/* Error Styling */
+.error {
+    padding-bottom: 60px;
+}
+
 /* Mobile */
 @media screen and (min-width:260px) {
 
