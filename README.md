@@ -149,13 +149,10 @@ The structure plane deals with the organising and arrangment of elements within 
 
 I created a userflow diagram to show how the user will interact with each page on the site. Since my goal was for the app to be simple I tried to keep each page and action within as few clicks as possible.
 
-<details><summary>Click here for userflow</summary>
-
-![Register/Log In Userflow](/static/images/readme-img/userflow-account.png)
-
-![CRUD Userflow](link)
-
-</details>
+|Userflow|Name|Details|
+|---|---|---|
+|![Register/Log In Userflow](/static/images/readme-img/userflow-account.png)|Register and Log In Userflow|A simple view of the users pathway to create an account or loggin into a previously registered account.|
+|![CRUD Userflow](/static/images/readme-img/userflow-crud.png)|CRUD Userflow|A simple view of the users pathway to create, edit and delete entries.|
 
 ### 2.4 Skeleton
 This plane is a more refined view of the user interface. Looking at the layout and visual hierarchy to ensure the site is both visually appealing and functional. I created a set of wireframes for different screen sizes, this is a simplified version of the final product, removing colour, typography, imagery to create a basic view of website and establish the layout.
