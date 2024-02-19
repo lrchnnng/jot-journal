@@ -176,24 +176,63 @@ Manual testing allows the tester to explore the site and using experience and cr
 |`Save Entry` does not redirect if any input field is empty|✓|
 
 
-## User Story
+## User Story Testing
 1. I want to register for an account.
+  
+|Nav Bar|Index Page|Register Page|
+|---|---|---|
+|![Registration link in nav bar](/static/images/testing-img/userstory-nav1.png)|![Registration Button on index page](/static/images/testing-img/userstory-index-button1.png)|![Register Page](/static/images/testing-img/userstory-register.png)|
+|User can find the registration page in the nav bar|User can also navigate to the registration page by clicking the `REGISTER` button on the Index page|User can input a username and password and click the register button in order to create an account. By clicking the `REGISTER` button the user's username and password will be saved to the database and the user will be redirected to the Profile page.|
+
 
 2. I want to log in and log out of my account.
 
+|Nav Bar|Index Page|Log In Page|
+|---|---|---|
+|![Log In link in nav bar](/static/images/testing-img/userstory-nav1.png)|![Log In Button on index page](/static/images/testing-img/userstory-index-button1.png)|![Log In Page](/static/images/testing-img/userstory-login.png)|
+|User can find a link to the Log In page in the nav bar| User can also navigate to the Log In page by by clicking the `LOG IN` button on the Index page|Once the user inputs their preregistered username and password and clicks the `LOG IN` button they will be redirected to the Profile page.|
+
 3. I want to be able to create new entries.
+
+|Nav Bar|Index Page|Profile Page|
+|---|---|---|
+|![Nav Bar - logged in](/static/images/testing-img/userstory-nav2.png)|![Index Page - logged in](/static/images/testing-img/userstory-index-button2.png)|![Create Entry Page](/static/images/)|
+|Once the user is logged in, the nav bar will show a link to the Create Entry page|The user will also have the `CREATE ENTRY` button available to them which will redirect to the Create Entry page|Once logged in the user will be redirected to the Profile page. This page has a `CREATE ENTRY` button that will navigate to the Create Entry page|
+
+|Create Entry Page|Save Entry Button|Saved Entry|
+|---|---|---|
+|![Create Entry Page](/static/images/testing-img/userstory-create.png)|![Create entry save button](/static/images/testing-img/userstory-save-button.png)|![Index page entry](/static/images/testing-img/userstory-index-entry.png)|
+|This page allows the user to fill in the form in order to create an entry.|Once the form is complete and all fields are filled the user can click the `SAVE ENTRY` button which will save the entry to the database|After the entry is saved it will be displayed along with other entries on the Index page.|
+
 
 4. I want to be able to find and read previous entries.
 
+|Index Page - Entry|Nav Bar|Profile|
+|---|---|---|
+|![Index page - Entry](/static/images/testing-img/userstory-index-entry.png)|![Nav Bar](/static/images/testing-img/userstory-nav2.png)|![Profile Page](/static/images/testing-img/userstory-profile.png)|
+|User can view previous entries by scrolling down on the index page. There are also clickable buttons to `SORT BY MOST RECENT`, `SORT BY BOOK TITLE` and `SORT BY AUTHOR`.|Users can navigate to the Index page through a clickable link in the nav bar (visible to users logged in or not) or by clicking the 'Jot' logo in the nav bar and footer.|Users can also click `VIEW EDNTRIES` in the Profile page to be redirected to the Index page.|
+
 5. I want to be able to edit previous entries.
+
+|Index Page - Entry|Edit Entry Page|Edit Entry Button|
+|---|---|---|
+|![Edit Entry button - Index page](/static/images/testing-img/userstory-index-entry.png)|![Edit entry page](/static/images/testing-img/userstory-edit.png)|![Edit entry and cancel buttons](/static/images/testing-img/userstory-edit-button.png)|
+|Users are able to edit entries by clicking the lighter `EDIT ENTRY` (the button with the pencil icon) button on the bottom left of the post.|The edit entry page will show a prefilled form that allows the user to edit the previously saved input fields.|Once the form has been completed and all fields have been filled the user can click the `EDIT ENTRY` button to save the entry. This overwrites the previously saved entry within the database. The user also has the option to select `CANCEL` button. Both buttons redirect the user back to the Index page.|
 
 6. I want to be able to delete previous entries.
 
-7. I want to easiy and intuitively find my way around the site.
-  
-  |Name|Screenshot|
-  |:---:|:---:|
-  |Name|![description](link)|
+|Index Page - Entry|
+|---|
+|![Delete button - Index page](/static/images/testing-img/userstory-index-entry.png)|
+|User has the option to delete any post as long as they are logged in. By clicking the `Delete` button (the button with the bin icon) the post is deleted from the database and removed from the index page.|
+
+7. I want to easily and intuitively find my way around the site.
+
+|Nav Bar - Not Logged In|Nav Bar - Logged In|Profile Page|
+|---|---|---|
+|![Nav bar logged out](/static/images/testing-img/userstory-nav1.png)|![Nav bar logged in](/static/images/testing-img/userstory-nav2.png)|![Profile Page](/static/images/testing-img/userstory-profile.png)|
+|When the user is not logged in they have the option to navigate to either the Index page, Register page or Log In page.|When the user is logged in they can navigate to the Index page, Profile page, Create Entry page or Log Out of their account.|When the user is logged in they have access to their profile page which has three buttons. These buttons allow navigation to the Index page (`VIEW ENTRIES`), Create Entry page and to Log Out of the account.|
+
 
 ---
 
@@ -268,9 +307,8 @@ All pages passed CSS validation
   -**Solution**: changed background colour of datepicker
 
 ## Testing Credits
-- [JShint](https://jshint.com/)
-  * Used for testing JavaScript.
-- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
-  * Used for testing performance, accessibility, best practices and SEO.
-- [Code Beautifier](https://codebeautify.org/python-formatter-beautifier#)
-  * Used to format Python code to PEP8 standards
+- [JShint](https://jshint.com/) - Used for testing JavaScript.
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used for testing performance, accessibility, best practices and SEO.
+- [Code Beautifier](https://codebeautify.org/python-formatter-beautifier#) - Used to format Python code to PEP8 standards
+- [Wave Web Accessiblity Tester](https://wave.webaim.org/) - Used to test accessibility
+- 

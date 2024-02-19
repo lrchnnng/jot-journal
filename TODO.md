@@ -1,15 +1,16 @@
 
+# Turn off debug mode before submitting
+
 # README
-
-- Structure
-    - Userflow
-        - Create userflow
-        - Add userflow screenshot
-        - Link to images in table
-        - Write description of userflow
-
 - Testing 
     - Complete testing to do list!
+
+    - Defensive coding explanation
+
+    - Security Features explained
+
+    - Database management explained
+
 
 
 # Testing
@@ -35,12 +36,6 @@
     - I want to easiy and intuitively find my way around the site.
         - Add screenshot
         - Add description
-
-    - A11y - colours
-        - https://color.a11y.com/
-        - Test 
-        - Add screenshots
-
 
 - Known bugs and fixes 
 

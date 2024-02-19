@@ -157,9 +157,14 @@ I created a userflow diagram to show how the user will interact with each page o
 ### 2.4 Skeleton
 This plane is a more refined view of the user interface. Looking at the layout and visual hierarchy to ensure the site is both visually appealing and functional. I created a set of wireframes for different screen sizes, this is a simplified version of the final product, removing colour, typography, imagery to create a basic view of website and establish the layout.
 
-| Mobile Wireframes | Desktop Wireframes |
-|:---:|:---:|
-|![Mobile Wireframes](/static/images/readme-img/wireframe-mobile.png)|![Tablet and Desktop Wireframes](/static/images/readme-img/wireframe-large.png) |
+| Mobile Wireframes|
+|:---:|
+|![Mobile Wireframes](/static/images/readme-img/wireframe-mobile.png)|
+
+
+| Desktop Wireframes |
+|:---:|
+|![Tablet and Desktop Wireframes](/static/images/readme-img/wireframe-large.png) |
 
 *Note: Some areas have changed between the wireframes and the final product, this is either due to making the page easier to navigate or an added function later in development.*
 
