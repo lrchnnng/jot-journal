@@ -197,7 +197,6 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 [Python](https://www.python.org/) - a versatile programming language known for its readability and simplicity. Encouraging clean and efficient code, it has a number of different applications from front end to back end. I have used Python to link the app to database as well as, depending on user interactions, executing a variety of functions (i.e register, log in, log out and all CRUD functions). 
 
-
 ### Frameworks & Libraries
 [Flask](https://flask.palletsprojects.com/en/3.0.x/) - a lightweight Python framework used in conjunction with Jinja templating in order to quickly and simply build and customise web applications. 
 
@@ -217,7 +216,9 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 [Heroku](https://www.heroku.com/home) - a cloud platform as a service (PaaS) that simplifies the deployment, management and scaling of web applications. Using Heroku I was able to connect both front and back end of my app and deploy the site successfully.
 
-### Defensive Programming
+---
+
+## 5. Defensive Programming
 Throughout the app I have used defensive programming to ensure that only certain actions are available to users who are currently logged in. By checking if a user is in session I was able to create multiple Jinja templates in order to change which interactive links and buttons are available to the user. 
 
 **Examples**
@@ -227,16 +228,16 @@ Throughout the app I have used defensive programming to ensure that only certain
 |---|---|---|
 |![Screenshot of index page when user is in session](/static/images/testing-img/userstory-index-button2.png)|![Screenshot of index page when user is not in session](/static/images/testing-img/userstory-index-button1.png)|If the user is not logged in (in session) then they do not have the option to create a new entry. They are, instead, signposted to either register or log in. This was done by using if/else statements with Jinja.|
 
-
+I also implemented defensive design and programming by having stringent form validation. Utilising the `required` attribute to input elements the user is unable to submit the form unless the input field is filled in. I have also set character length requirements for text input elements to ensure that items like 'Username', 'Password and form inputs aren't too long or too short. 
 
 ---
 
-## 4. Testing
+## 6. Testing
 [Click to view testing documentation](testing.md)
 
 ---
 
-## 5. Deployment
+## 7. Deployment
 ### GitHub pages deployment <!-- omit in toc -->
 Once this is complete you should be able to view the webpage online, this is updated every so often which allows the user to see any changes in almost real time.
 
@@ -298,13 +299,10 @@ It's also possible to log in, commit and deploy your app via the command line:
     
     git push
 
----
-
-## 6. Defensive Coding
 
 ---
 
-## 6. Credits and Acknowledgments
+## 8. Credits and Acknowledgments
 [Am I Responsive?](https://ui.dev/amiresponsive) - Used to generate a screenshot of the web application on multiple viewport sizes.
 
 [Figma](https://www.figma.com/) - Used to create wireframes.
