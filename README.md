@@ -22,6 +22,7 @@
   - [2.4 Skeleton](#24-skeleton)
   - [2.5 Surface](#25-surface)
 - [3. Database Design](#3-database-design)
+- [4. Error Handling]
 - [4. Technologies Used](#4-technologies-used)
 - [5. Defensive Programming](#5-defensive-programming)
 - [6. Future Goals](#6-future-goals)
@@ -193,7 +194,14 @@ As I knew I wanted to keep the app as simple as possible I used MongoDB as my no
 
 ---
 
-## 4. Technologies Used
+## Error Handling
+Within my app.py file I opted to create error handlers for the most common errors (400, 401, 404, 500). I created an error handler for each error which leads the user to a rendered template that generates an error specific message explaining the error to the user and with a button link redirecting the user back to the index page.
+
+![Screenshot of 404 Error Page](/static/images/readme-img/error-404.png)
+
+---
+
+## 5. Technologies Used
 
 ### Languages
 [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) (Cascading Style Sheets) - allows developers to style HTML elements by defining properties such as colours, fonts and layout and enhances the user experience. It is also used to create responsivity.
@@ -227,7 +235,7 @@ As I knew I wanted to keep the app as simple as possible I used MongoDB as my no
 
 ---
 
-## 5. Defensive Programming
+## 6. Defensive Programming
 Throughout the app I have used defensive programming to ensure that only certain actions are available to users who are currently logged in. By checking if a user is in session I was able to create multiple Jinja templates in order to change which interactive links and buttons are available to the user. 
 
 **Examples**
@@ -241,17 +249,23 @@ I also implemented defensive design and programming by having stringent form val
 
 ---
 
-## 6. Future Goals
-
+## 7. Future Goals
+In future iterations of the app there are a few ideas I'd like to explore:
+1. I'd like to show the user in session their previous entries within their personal profile page.
+2. I'd like to only allow the creater of the entry to be allowed to edit and delete entries.
+3. I'd like to create an admin account that allows an admin user to edit and delete all posts in order to censor harmful content.
+4. I'd like to have a light and a dark mode styling that allows users to toggle between the two depending on preference.
+5. I'd like to link the Google Books API in order to allow users to search books and add the book cover image to their review entry.
+6. I'd like to add a search bar that allows user to search for a specific book title or author so they can read specific reviews.
 
 ---
 
-## 7. Testing
+## 8. Testing
 [Click to view testing documentation](testing.md)
 
 ---
 
-## 8. Deployment
+## 9. Deployment
 ### GitHub pages deployment <!-- omit in toc -->
 Once this is complete you should be able to view the webpage online, this is updated every so often which allows the user to see any changes in almost real time.
 
@@ -285,7 +299,6 @@ Select the region you are working in.
 3. Choose the correct repository for your application and click on `Connect`.
 4. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the Deploy Branch button whenever you want a change made.
 
-
 In the Settings tab, click on Reveal Config Vars and set the fo
 
 |Deployment Type|Screenshot|Description|
@@ -313,10 +326,9 @@ It's also possible to log in, commit and deploy your app via the command line:
     
     git push
 
-
 ---
 
-## 9. Credits and Acknowledgments
+## 10. Credits and Acknowledgments
 [Am I Responsive?](https://ui.dev/amiresponsive) - Used to generate a screenshot of the web application on multiple viewport sizes.
 
 [Figma](https://www.figma.com/) - Used to create wireframes.

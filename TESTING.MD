@@ -307,6 +307,8 @@ All pages passed CSS validation
   - **Solution:** Using the 'Inspect' devtool within my browser I was able to directly target various elements of the date picker and change the background to match the rest of the application. I also utilised this when styling other aspects of the form (i.e the 'Would you recommend?' switch)
 - **Issue:** My initial idea for the web application was to create a private journal. I spent a long time trying to find a way to only display the current session users entries to them on a private page that is only viewable when logged in.
   - **Solutions:** In the interests of time constraints and struggling to find answers to my issue I decided to change my idea and create a collaborative book review app that allows all users to edit and delete posts. 
+- **Issue:** When a user added a new entry the entry would appear at the bottom as the entries as they were being displayed oldest first.
+  - **Solutions:** Within my index function in app.py, I created a if/else statement and two variables (sort_option, sort_field) to create three buttons on the index page which allow the user to decide which order they would like to view the entries. I also used Jinja templating within the button class in order to add the 'disabled' class to the button so the user knows which sort option is in use and which are still available.
 
 ## Testing Credits
 - [JShint](https://jshint.com/) - Used for testing JavaScript.
