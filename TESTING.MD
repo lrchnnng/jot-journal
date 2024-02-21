@@ -301,10 +301,12 @@ All pages passed CSS validation
 [Code Beautifier](https://codebeautify.org/python-formatter-beautifier#) - I ran my python code through this formatter to ensure that it met PEP8 guidlines.
 
 ## Known bugs and fixes 
-- **Issue**: connecting MongoDB
-  - **Solution**: adding in DB name to connection URL in env.py
--**Issue**: white text not showing on date picker
-  -**Solution**: changed background colour of datepicker
+- **Issue:** When connecting MongoDB I initially had issues with it not connecting a specific database.
+  - **Solution:** Upon closer inspection, within my env.py file the pre-created Mongo URI link did not contain my specific database name. Once I had added this I was able to test the connection within the command line by adding and removing entries.
+- **Issue:** When I had styled the dropdown genre selection to contain white text (in order to contrast with the darker background) I inadvertently targeted all dropdown components including the date picker within my 'Create Entry' and 'Edit Entry' forms. The date picker background was also white which caused the text to be unreadble to the user.
+  - **Solution:** Using the 'Inspect' devtool within my browser I was able to directly target various elements of the date picker and change the background to match the rest of the application. I also utilised this when styling other aspects of the form (i.e the 'Would you reccommend?' switch)
+- **Issue:** My initial idea for the web application was to create a private journal. I spent a long time trying to find a way to only display the current session users entries to them on a private page that is only viewable when logged in.
+  - **Solutions:** In the interests of time constraints and struggling to find answers to my issue I decided to change my idea and create a collaborative book review app that allows all users to edit and delete posts. 
 
 ## Testing Credits
 - [JShint](https://jshint.com/) - Used for testing JavaScript.
