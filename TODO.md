@@ -3,8 +3,6 @@
 
 # README
 
-    - Database management explained
-
     - Future goals
 
 

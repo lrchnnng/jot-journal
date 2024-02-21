@@ -178,7 +178,7 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 |Typography - Title|![google fonts](/static/images/readme-img/typography-title.png)| I chose to use a bold but readable font that gave the impression of being hand drawn, this fits with the idea of writing and journaling. I used this only for title text so that it visually differentiated the hierarchy of information on the page.|
 |Typography - Main Text|![google fonts](/static/images/readme-img/typography-main.png)| I chose to use a simple sans serif font for the rest of the text on the page, keeping the main bulk of the text in a simple, easy to read font keeps the design consistant and accessible.|
 |Colours|![Colour Palette Grey](/static/images/readme-img/colours-grey.png)| When deciding on a colour palette, I wanted to keep the web app as simple and readable as possible. By choosing a grey colour scheme with a red contrast colour I was able to achieve a higher level of contrast between background colours and text. From a development standpoint, I opted to use the built in class name colour palettes from Materialize CSS. This streamlined the styling stage of the project.|
-|Colours|![Colour Palette Red](/static/images/readme-img/colours-red.png)| For the buttons and clickable links I chose various shades of red from the Materialize CSS class name colour palette. By only having interactive parts of the page highlighted in red, the user can clearly identify these areas without having to guess.|
+|Colours|![Colour Palette Red](/static/images/readme-img/colours-red.png)| For the buttons and clickable links I chose various shades of red from the Materialize CSS class name colour palette. By only having interactive parts of the page highlighted in red, the user can clearly identify these areas without guessing.|
 
 ---
 
@@ -237,7 +237,7 @@ Throughout the app I have used defensive programming to ensure that only certain
 |---|---|---|
 |![Screenshot of index page when user is in session](/static/images/testing-img/userstory-index-button2.png)|![Screenshot of index page when user is not in session](/static/images/testing-img/userstory-index-button1.png)|If the user is not logged in (in session) then they do not have the option to create a new entry. They are, instead, signposted to either register or log in. This was done by using if/else statements with Jinja.|
 
-I also implemented defensive design and programming by having stringent form validation. Utilising the `required` attribute to input elements the user is unable to submit the form unless the input field is filled in. I have also set character length requirements for text input elements to ensure that items like 'Username', 'Password and form inputs aren't too long or too short. 
+I also implemented defensive design and programming by having stringent form validation. Utilising the `required` attribute to input elements the user is unable to submit the form unless the input field is filled in. I have also set character length requirements for text input elements to ensure that items like 'Username', 'Password, and form inputs aren't too long or too short. 
 
 ---
 
@@ -288,14 +288,14 @@ Select the region you are working in.
 
 In the Settings tab, click on Reveal Config Vars and set the fo
 
-|Deployment Type|Screenshot|Description
+|Deployment Type|Screenshot|Description|
 |:--:|:--:|:--:|
 |Automatic|![screenshot of Heroku environment variables](static/images/readme-img/heroku-config.png)|*In Heroku Settings*: You will need to set your Environment Variables within the config settings by clicking `Reveal Config Vars` before allowing automatic deployment - this is a key step to ensuring your application is deployed properly.|
 |Manual|![screenshot of manual deployment section](static/images/readme-img/heroku-manual-deploy.png)|*In deploy tab*: You can also opt to manually deploy the project which will initiate a build.|
 
 5. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should see the below `View` button, click this to open your application:
 
-![Heroku manual deploy view button screenshot](static/images/readme-img/heroku-deploy-view.png)
+![Heroku manual deploy view button screenshot](/static/images/readme-img/heroku-deploy-view.png)
 
 
 **Heroku CLI deployment** 
@@ -304,7 +304,7 @@ It's also possible to log in, commit and deploy your app via the command line:
 
 1. Login to Heroku via the CLI using heroku login -i
 2. Enter your email and password
-![Heroku CLI login screenshot](static/images/readme-images/heroku-cli-login.png)
+![Heroku CLI login screenshot](static/images/readme-img/heroku-cli-login.png)
 3. Using the following commands in the terminal you can commit and push your files to both Heroku and Github:
     
     git add -A
