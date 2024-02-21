@@ -69,6 +69,10 @@ label {
     margin: 0 10px;
 }
 
+.sidenav {
+    background-color: #212121;
+}
+
 /* Footer */
 footer {
     position: relative;
