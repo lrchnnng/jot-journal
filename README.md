@@ -21,12 +21,14 @@
   - [2.3 Structure](#23-structure)
   - [2.4 Skeleton](#24-skeleton)
   - [2.5 Surface](#25-surface)
-- [3. Technologies Used](#3-technologies-used)
-- [4. Testing](#4-testing)
-- [5. User Story](#5-user-story)
-- [6. Deployment](#6-deployment)
+- [3. Database Design](#3-database-design)
+- [4. Technologies Used](#4-technologies-used)
+- [5. Defensive Programming](#5-defensive-programming)
+- [6. Future Goals](#6-future-goals)
+- [7. Testing](#7-testing)
+- [8. Deployment](#8-deployment)
   - [Heroku Deployment](#heroku-deployment)
-- [7. Credits and Acknowledgments](#7-credits-and-acknowledgments)
+- [9. Credits and Acknowledgments](#9-credits-and-acknowledgments)
 
 ## 1. Website Information 
 Business goals: 
@@ -181,6 +183,13 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 ---
 
 ## 3. Database Design
+As I knew I wanted to keep the app as simple as possible I used MongoDB as my non-relational database management system. I created two databases, one for the username and password and one for the user entry. I also created a separate database for genre names for use within the genre dropdown selection within my form.
+
+|Database|Example|Explanation|
+|---|:---:|---|
+|users|![Screenshot of sample users database entry](/static/images/readme-img/database-users.png)|When the user registers their account their username is saved along with a *hashed*/encrypted password. The username is user to link the user to their respective posts.|
+|entries|![Screenshot of sample entries database entry](/static/images/readme-img/database-entries.png)|When the user creates a new entry or edits an existing entry the form data is saved as a document within MongoDB. At the end of each document the users username is saved in order to link the user to each entry.|
+|genres|![Screenshot of genres database entry](/static/images/readme-img/database-genres.png)|I opted to created a separate database for genres in order to iterate through them within a dropdown menu for both Create Entry and Edit Entry forms.|
 
 ---
 
@@ -232,12 +241,17 @@ I also implemented defensive design and programming by having stringent form val
 
 ---
 
-## 6. Testing
+## 6. Future Goals
+
+
+---
+
+## 7. Testing
 [Click to view testing documentation](testing.md)
 
 ---
 
-## 7. Deployment
+## 8. Deployment
 ### GitHub pages deployment <!-- omit in toc -->
 Once this is complete you should be able to view the webpage online, this is updated every so often which allows the user to see any changes in almost real time.
 
@@ -276,12 +290,12 @@ In the Settings tab, click on Reveal Config Vars and set the fo
 
 |Deployment Type|Screenshot|Description
 |:--:|:--:|:--:|
-|Automatic|![screenshot of Heroku environment variables](static/images/readme-images/heroku-config.png)|*In Heroku Settings*: You will need to set your Environment Variables within the config settings by clicking `Reveal Config Vars` before allowing automatic deployment - this is a key step to ensuring your application is deployed properly.|
-|Manual|![screenshot of manual deployment section](static/images/readme-images/heroku-manual-deploy.png)|*In deploy tab*: You can also opt to manually deploy the project which will initiate a build.|
+|Automatic|![screenshot of Heroku environment variables](static/images/readme-img/heroku-config.png)|*In Heroku Settings*: You will need to set your Environment Variables within the config settings by clicking `Reveal Config Vars` before allowing automatic deployment - this is a key step to ensuring your application is deployed properly.|
+|Manual|![screenshot of manual deployment section](static/images/readme-img/heroku-manual-deploy.png)|*In deploy tab*: You can also opt to manually deploy the project which will initiate a build.|
 
 5. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should see the below `View` button, click this to open your application:
 
-![Heroku manual deploy view button screenshot](static/images/readme-images/heroku-deploy-view.png)
+![Heroku manual deploy view button screenshot](static/images/readme-img/heroku-deploy-view.png)
 
 
 **Heroku CLI deployment** 
@@ -302,7 +316,7 @@ It's also possible to log in, commit and deploy your app via the command line:
 
 ---
 
-## 8. Credits and Acknowledgments
+## 9. Credits and Acknowledgments
 [Am I Responsive?](https://ui.dev/amiresponsive) - Used to generate a screenshot of the web application on multiple viewport sizes.
 
 [Figma](https://www.figma.com/) - Used to create wireframes.
@@ -315,6 +329,4 @@ It's also possible to log in, commit and deploy your app via the command line:
 
 [Materialize CSS](https://materializecss.com/) - Used to create fully responsive navbar and a variety of other components.
 
-
-  
 ---
