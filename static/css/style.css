@@ -24,24 +24,6 @@ p {
     font-size: 12px;
 }
 
-label {
-    color: #c6c5c5;
-    font-weight: bold;
-}
-
-.input-field>label {
-    color: #c6c5c5;
-    font-weight: normal;
-}
-
-.direct {
-    font-size: 16px;
-}
-
-.direct a {
-    text-decoration: underline;
-}
-
 .arrow {
     margin: 20px 0;
     font-size: 20px;
@@ -56,6 +38,16 @@ label {
 /* Form Styling */
 input {
     font-size: clamp(1rem, 0.9432rem + 0.2841vw, 1.125rem);
+}
+
+.input-field>label {
+    color: #c6c5c5;
+    font-weight: normal;
+}
+
+label {
+    color: #c6c5c5;
+    font-weight: bold;
 }
 
 /* Flashes styling*/
@@ -73,8 +65,8 @@ input {
 }
 
 .nav-link {
-    font-size: 20px;
-    margin: 0 20px;
+    font-size: 16px;
+    margin: 0 10px;
 }
 
 /* Footer */
@@ -138,6 +130,14 @@ footer {
     background: #fafafa;
     border-radius: 20px;
     padding: 20px 20px 0 20px;
+}
+
+.direct {
+    font-size: 16px;
+}
+
+.direct a {
+    text-decoration: underline;
 }
 
 /* General Button Styling */
@@ -238,7 +238,6 @@ footer {
     /* Index Styling */
     .container {
         margin: 0 auto;
-
     }
 
     .sort-buttons {
@@ -253,7 +252,7 @@ footer {
 
     .card-panel {
         box-shadow: 0px 0px 20px #fafafa2b;
-        margin: 0 20px;
+        margin: 10px 20px;
     }
 
     /*Footer Styling*/
