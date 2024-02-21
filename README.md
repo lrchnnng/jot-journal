@@ -180,9 +180,13 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 ---
 
-## 3. Technologies Used
+## 3. Database Design
 
-### Languages <!-- omit in toc -->
+---
+
+## 4. Technologies Used
+
+### Languages
 [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) (Cascading Style Sheets) - allows developers to style HTML elements by defining properties such as colours, fonts and layout and enhances the user experience. It is also used to create responsivity.
 
 [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) (HyperText Markup Language) - the standard markup language for creating web pages and applicatons. It provides structure for the content of the page and allows the developer to organise and define the elements (i.e headings, paragraphs, images and links).
@@ -194,7 +198,7 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 [Python](https://www.python.org/) - a versatile programming language known for its readability and simplicity. Encouraging clean and efficient code, it has a number of different applications from front end to back end. I have used Python to link the app to database as well as, depending on user interactions, executing a variety of functions (i.e register, log in, log out and all CRUD functions). 
 
 
-### Frameworks & Libraries <!-- omit in toc -->
+### Frameworks & Libraries
 [Flask](https://flask.palletsprojects.com/en/3.0.x/) - a lightweight Python framework used in conjunction with Jinja templating in order to quickly and simply build and customise web applications. 
 
 [jQuery](https://jquery.com/) - a fast and lightweight JavaScript libary used to simplify and streamline JavaScript code. It provides a set of easy to use built in functions that allow developers to manipulate HTML documents and handle events. I used jQuery to simplify the JavaScript code used to create interactivity and responsivity within the web app.
@@ -203,15 +207,27 @@ The surface plane is the last layer and deals with the aesthetics of the user in
 
 [Materialize CSS](https://materializecss.com/) - a front-end framework following Google's material design principles. It provides a collection of pre-designed components, styles and animations to simplify the building process. I used the responsive nav bar and footer components along with the pre-built buttons and form input fields. I also used Materialize CSS to style the web application.
 
-### Design <!-- omit in toc -->
+### Design
 [Figma](https://www.figma.com/) - a design and prototyping tool used for UI/UX Design. I used figma to create responsive wireframes for each page of the web app.
 
 [Google Fonts](https://fonts.google.com/) - a free, open-source collection of web fonts provided by Google. Using CSS I integrated and applied two of my selected fonts into the web app.
 
-### Other <!-- omit in toc -->
+### Other
 [MongoDB](https://www.mongodb.com/) - a NoSQL database management system that stores data in a JSON-like format called BSON. It is designed to handle large volumes of unstructured or semi-structured data. I linked the database to the app in order to store user information and user input when executing CRUD functions.
 
 [Heroku](https://www.heroku.com/home) - a cloud platform as a service (PaaS) that simplifies the deployment, management and scaling of web applications. Using Heroku I was able to connect both front and back end of my app and deploy the site successfully.
+
+### Defensive Programming
+Throughout the app I have used defensive programming to ensure that only certain actions are available to users who are currently logged in. By checking if a user is in session I was able to create multiple Jinja templates in order to change which interactive links and buttons are available to the user. 
+
+**Examples**
+|User in session|User not in session|Explanation|
+|:---:|:---:|:---:|
+|![Screenshot of nav bar when user is in session](/static/images/readme-img/defensive-user-in.png)|![Screenshot of nav bar when user is not in session](/static/images/readme-img/defensive-user-out.png)|By using Jinja templating and if/else statements I was able to change which nav bar links are shown depending on if the user is logged in or not.|
+|---|---|---|
+|![Screenshot of index page when user is in session](/static/images/testing-img/userstory-index-button2.png)|![Screenshot of index page when user is not in session](/static/images/testing-img/userstory-index-button1.png)|If the user is not logged in (in session) then they do not have the option to create a new entry. They are, instead, signposted to either register or log in. This was done by using if/else statements with Jinja.|
+
+
 
 ---
 
@@ -281,6 +297,10 @@ It's also possible to log in, commit and deploy your app via the command line:
     git commit -m "INSERT COMMIT MESSAGE"
     
     git push
+
+---
+
+## 6. Defensive Coding
 
 ---
 
