@@ -226,7 +226,7 @@ Manual testing allows the tester to explore the site and using experience and cr
 |![Delete button - Index page](/static/images/testing-img/userstory-index-entry.png)|
 |User has the option to delete any post as long as they are logged in. By clicking the `Delete` button (the button with the bin icon) the post is deleted from the database and removed from the index page.|
 
-7. I want to easily and intuitively find my way around the site.
+7. I want to be able to easily and intuitively navigate the site.
 
 |Nav Bar - Not Logged In|Nav Bar - Logged In|Profile Page|
 |---|---|---|
@@ -304,7 +304,7 @@ All pages passed CSS validation
 - **Issue:** When connecting MongoDB I initially had issues with it not connecting a specific database.
   - **Solution:** Upon closer inspection, within my env.py file the pre-created Mongo URI link did not contain my specific database name. Once I had added this I was able to test the connection within the command line by adding and removing entries.
 - **Issue:** When I had styled the dropdown genre selection to contain white text (in order to contrast with the darker background) I inadvertently targeted all dropdown components including the date picker within my 'Create Entry' and 'Edit Entry' forms. The date picker background was also white which caused the text to be unreadble to the user.
-  - **Solution:** Using the 'Inspect' devtool within my browser I was able to directly target various elements of the date picker and change the background to match the rest of the application. I also utilised this when styling other aspects of the form (i.e the 'Would you reccommend?' switch)
+  - **Solution:** Using the 'Inspect' devtool within my browser I was able to directly target various elements of the date picker and change the background to match the rest of the application. I also utilised this when styling other aspects of the form (i.e the 'Would you recommend?' switch)
 - **Issue:** My initial idea for the web application was to create a private journal. I spent a long time trying to find a way to only display the current session users entries to them on a private page that is only viewable when logged in.
   - **Solutions:** In the interests of time constraints and struggling to find answers to my issue I decided to change my idea and create a collaborative book review app that allows all users to edit and delete posts. 
 
