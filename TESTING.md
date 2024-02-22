@@ -1,4 +1,4 @@
-[Return to README](https://github.com/lrchnnng/parrot-quiz/blob/main/README.md)
+[Return to README](https://github.com/lrchnnng/jot-journal/blob/main/README.md)
 
 ---
 # Testing <!-- omit in toc -->
