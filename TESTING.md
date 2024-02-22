@@ -315,4 +315,3 @@ All pages passed CSS validation
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - Used for testing performance, accessibility, best practices and SEO.
 - [Code Beautifier](https://codebeautify.org/python-formatter-beautifier#) - Used to format Python code to PEP8 standards
 - [Wave Web Accessiblity Tester](https://wave.webaim.org/) - Used to test accessibility
-- 
