@@ -1,3 +1,4 @@
+/* Initialazion code from MaterializeCSS */
 $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.collapsible').collapsible();
