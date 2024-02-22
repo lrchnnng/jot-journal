@@ -3,13 +3,13 @@
 # Jot <!-- omit in toc -->
 ## A 5 minute journal app  <!-- omit in toc -->
 
-[Testing Documentation](link)
+[Testing Documentation](https://github.com/lrchnnng/jot-journal/blob/main/TESTING.md)
 
 [Live Site](https://jot-journal-2bfb14d7356f.herokuapp.com/)
 
 <br>
 
-![Website Mockup](link)
+![Website Mockup](/static/images/readme-img/mockup.png)
 
 </div>
 
@@ -22,14 +22,14 @@
   - [2.4 Skeleton](#24-skeleton)
   - [2.5 Surface](#25-surface)
 - [3. Database Design](#3-database-design)
-- [4. Error Handling]
-- [4. Technologies Used](#4-technologies-used)
-- [5. Defensive Programming](#5-defensive-programming)
-- [6. Future Goals](#6-future-goals)
-- [7. Testing](#7-testing)
-- [8. Deployment](#8-deployment)
+- [4. Error Handling](#4-error-handling)
+- [4. Technologies Used](#5-technologies-used)
+- [5. Defensive Programming](#6-defensive-programming)
+- [6. Future Goals](#7-future-goals)
+- [7. Testing](#8-testing)
+- [8. Deployment](#9-deployment)
   - [Heroku Deployment](#heroku-deployment)
-- [9. Credits and Acknowledgments](#9-credits-and-acknowledgments)
+- [9. Credits and Acknowledgments](#10-credits-and-acknowledgments)
 
 ## 1. Website Information 
 Business goals: 
@@ -194,7 +194,7 @@ As I knew I wanted to keep the app as simple as possible I used MongoDB as my no
 
 ---
 
-## Error Handling
+## 4. Error Handling
 Within my app.py file I opted to create error handlers for the most common errors (400, 401, 404, 500). I created an error handler for each error which leads the user to a rendered template that generates an error specific message explaining the error to the user and with a button link redirecting the user back to the index page.
 
 ![Screenshot of 404 Error Page](/static/images/readme-img/error-404.png)
