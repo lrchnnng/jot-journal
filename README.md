@@ -261,7 +261,7 @@ In future iterations of the app there are a few ideas I'd like to explore:
 ---
 
 ## 8. Testing
-[Click to view testing documentation](testing.md)
+[Click to view testing documentation](https://github.com/lrchnnng/jot-journal/blob/main/TESTING.md)
 
 ---
 
